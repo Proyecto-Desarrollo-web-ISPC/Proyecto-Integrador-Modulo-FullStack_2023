@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../css/styles.css">
         <title>Tienda de campeones</title>
     </head>
-    <body>
+    <body id="bodyId">
         <header class="container-fluid headerClass mx-0 px-0 mb-5">
             <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline" data-bs-theme="light" id="navbarId">
                 <div class="container-fluid">
@@ -28,9 +28,6 @@
                                 <a class="nav-link fw-medium" aria-current="page" href="../index.html">Inicio</a>
                             </li>
                             <li class="nav-item navItem mx-2">
-                                <a class="nav-link fw-medium" href="#">Productos</a>
-                            </li>
-                            <li class="nav-item navItem mx-2">
                                 <a class="nav-link fw-medium" href="#">Nosotros</a>
                             </li>
                         </ul>
@@ -45,9 +42,9 @@
                             </button>
                         </div>
                         <div id="cartBtn" class="mx-2 navItem">
-                            <button class="material-symbols-sharp button">
+                            <a href="./cart.html" class="material-symbols-sharp button text-decoration-none">
                                 shopping_cart
-                            </button>
+                            </a>
                         </div>
                         <div id="togglerBtnDM" class="mx-2 navItem d-block">
                             <button class="material-symbols-sharp button">
@@ -64,196 +61,494 @@
             </nav>
         </header>
         <main>
-            <h1>Nuestros productos</h1>
+            <h1 class="mx-5" id="mainTitle">Nuestros productos</h1>
             <div class="mx-5 row d-flex flex-wrap justify-content-between my-5">
-                <div class="modal-argentina col-4 d-flex justify-content-center flex-wrap " data-bs-theme="dark">
-                    <button type="button" class="btn btn-primary p-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Argentina
-                        <img src="#" alt="argentina">
+                <div class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalArgentina">
+                    Argentina
+                    <img src="#" alt="argentina">
                     </button>
-                    <!-- Scrollable modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body modal-dialog modal-dialog-scrollable">
-                                ...
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Understood</button>
+                    <div>
+                        <div class="modal fade" id="modalArgentina" tabindex="-1" aria-labelledby="argentinaModalLabel" aria-hidden="true" data-bs-theme="light">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 modalTitle" id="argentinaModalLabel">Selección Argentina</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 1978</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 1986</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 2002</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" type="button" class="btn btn-primary">Ir al carro</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-brasil col-4 d-flex justify-content-center flex-wrap " data-bs-theme="dark">
-                    <button type="button" class="btn btn-primary p-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Argentina
-                        <img src="#" alt="argentina">
+
+                <div class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalBrasil">
+                    Brasil
+                    <img src="#" alt="brasil">
                     </button>
-                    <!-- Scrollable modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body modal-dialog modal-dialog-scrollable">
-                                ...
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Understood</button>
+                    <div>
+                        <div class="modal fade" id="modalBrasil" tabindex="-1" aria-labelledby="modalBrasilLabel" aria-hidden="true" data-bs-theme="light">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 modalTitle" id="modalBrasilLabel">Selección de Brasil</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="brasil">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Brasil</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="brasil">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Brasil</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="brasil">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Brasil</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" type="button" class="btn btn-primary">Ir al carro</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-alemania col-4 d-flex justify-content-center flex-wrap " data-bs-theme="dark">
-                    <button type="button" class="btn btn-primary p-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Argentina
-                        <img src="#" alt="argentina">
+                
+                <div class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#alemaniaModal">
+                    Alemania
+                    <img src="#" alt="alemania">
                     </button>
-                    <!-- Scrollable modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body modal-dialog modal-dialog-scrollable">
-                                ...
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Understood</button>
+                    <div>
+                        <div class="modal fade" id="alemaniaModal" tabindex="-1" aria-labelledby="alemaniaModalLabel" aria-hidden="true" data-bs-theme="light">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 modalTitle" id="exampleModalLabel">Selección Argentina</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="alemania">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Alemania</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="alemania">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Alemania</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="alemania">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Alemania</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" type="button" class="btn btn-primary">Ir al carro</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-uruguay col-4 d-flex justify-content-center flex-wrap " data-bs-theme="dark">
-                    <button type="button" class="btn btn-primary p-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Argentina
-                        <img src="#" alt="argentina">
+
+                <div class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    España
+                    <img src="#" alt="españa">
                     </button>
-                    <!-- Scrollable modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body modal-dialog modal-dialog-scrollable">
-                                ...
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Understood</button>
+                    <div>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 modalTitle" id="exampleModalLabel">Selección de España</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="españa">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta España</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="españa">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta España</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="españa">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta España</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" type="button" class="btn btn-primary">Ir al carro</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="imagenCopa col-4 d-flex justify-content-center flex-wrap " data-bs-theme="dark">Imagen de copa</div>
-                <div class="modal-francia col-4 d-flex justify-content-center flex-wrap " data-bs-theme="dark">
-                    <button type="button" class="btn btn-primary p-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Argentina
-                        <img src="#" alt="argentina">
+
+                <div class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center">
+                    Imagen de copa
+                </div>
+
+                <div class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Argentina
+                    <img src="#" alt="argentina">
                     </button>
-                    <!-- Scrollable modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body modal-dialog modal-dialog-scrollable">
-                                ...
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Understood</button>
+                    <div>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 modalTitle" id="exampleModalLabel">Selección Argentina</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 1978</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 1986</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 2002</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" type="button" class="btn btn-primary">Ir al carro</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-inglaterra col-4 d-flex justify-content-center flex-wrap " data-bs-theme="dark">
-                    <button type="button" class="btn btn-primary p-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Argentina
-                        <img src="#" alt="argentina">
+
+                <div class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Argentina
+                    <img src="#" alt="argentina">
                     </button>
-                    <!-- Scrollable modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body modal-dialog modal-dialog-scrollable">
-                                ...
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Understood</button>
+                    <div>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 modalTitle" id="exampleModalLabel">Selección Argentina</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 1978</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 1986</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 2002</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" type="button" class="btn btn-primary">Ir al carro</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-italia col-4 d-flex justify-content-center flex-wrap " data-bs-theme="dark">
-                    <button type="button" class="btn btn-primary p-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Argentina
-                        <img src="#" alt="argentina">
+
+                <div class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Argentina
+                    <img src="#" alt="argentina">
                     </button>
-                    <!-- Scrollable modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body modal-dialog modal-dialog-scrollable">
-                                ...
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Understood</button>
+                    <div>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 modalTitle" id="exampleModalLabel">Selección Argentina</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 1978</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 1986</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 2002</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" type="button" class="btn btn-primary">Ir al carro</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-españa col-4 d-flex justify-content-center flex-wrap " data-bs-theme="dark">
-                    <button type="button" class="btn btn-primary p-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Argentina
-                        <img src="#" alt="argentina">
+
+                <div class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Argentina
+                    <img src="#" alt="argentina">
                     </button>
-                    <!-- Scrollable modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body modal-dialog modal-dialog-scrollable">
-                                ...
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Understood</button>
+                    <div>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 modalTitle" id="exampleModalLabel">Selección Argentina</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 1978</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 1986</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard" style="width: 18rem;" data-bs-theme="light">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 2002</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" type="button" class="btn btn-primary">Ir al carro</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -275,7 +570,8 @@
                 </div>
             </div>
         </footer>
-        <script type="module" src="../src/js/app.js"></script>
+        <script type="module" src="../src/js/dynamicProducts.js"></script>
+        <script type="module" src="../src/js/themeModeProducts.js"></script>
         <script type="module" src="../main.js"></script>
     </body>
 </html>

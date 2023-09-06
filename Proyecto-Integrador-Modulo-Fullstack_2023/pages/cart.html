@@ -70,7 +70,7 @@
                 Tus camisetas:
             </h2>
             <section class="container-fluid d-flex align-items-start justify-content-evenly flex-wrap flex-row">
-                <div class="col-7 mx-1 container container-fluid">
+                <div class="col-12 col-sm-8 col-md-7 mx-1 container container-fluid">
                     <!-- <div class="row container-fluid">
                         <div class="card mb-3 mx-2 px-0" >
                             <div class="row g-0">
@@ -101,7 +101,7 @@
                         <!-- Card -->
                         <!--! Row 1  -->
                         <div class="card-body" id="cardContainer">
-                            <div class="row py-3 mb-3" id="productCardRow">
+                            <div class="row py-3 mb-3" id="productItem">
                                 <div class="col-4">
                                     <div class="bg-image cardImg rounded">
                                         <img class="w-100 rounded" src="../img/products/Alemania/Alemania-1954-primera.svg" alt="producto">
@@ -113,14 +113,14 @@
                                     <ul class="list-unstyled my-2">
                                         <span>$4900</span>
                                     </ul>
-                                    <ul class="list-unstyled mt-5">
-                                        <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp" id="btnDeleteItem">
+                                    <ul class="list-unstyled mt-5 ">
+                                        <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded" id="btnDeleteItem">
                                             delete
                                         </button>
-                                        <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp" id="btnReduceItem">
+                                        <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded" id="btnReduceItem">
                                             remove
                                         </button>
-                                        <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp" id="btnAddItem">
+                                        <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded" id="btnAddItem">
                                             add
                                         </button>
                                     </ul>
@@ -138,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 mx-2 px-2 container-fluid d-flex flex-column justify-content-between">
+                <div class="col-12 col-sm-8 col-md-4 container container-fluid d-flex flex-column justify-content-between">
                     <div class="card" data-bs-theme="light">
                         <h5 class="card-header p-3">Resumen del carro</h5>
                         <div class="card-body">
@@ -147,19 +147,19 @@
                                 <div class="d-flex flex-row flex-wrap justify-content-between">
                                     <div class="d-flex flex-column my-3">
                                         <span>An item</span>
-                                        <span>A second item</span>
-                                        <span>A third item</span>
                                     </div>
                                     <div class="d-flex flex-column my-3">
                                         <span>Price 1</span>
-                                        <span>Price 2</span>
-                                        <span>Price 3</span>
                                     </div>
                                 </div>
                                 <hr class="my-4">
+                                <div class="d-flex flex-column my-3" id="outputSubtotal">
+                                    <!-- subtotal aparece acá -->
+                                    
+                                </div>
                             </div>
                             <div class="row">
-                                    <button type="button" class="btn btn-success col my-1 mx-3 cartBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    <button type="button" class="btn btn-success col my-1 mx-3 cartBtn" data-bs-toggle="modal" data-bs-target="#modalForm">
                                         Finalizar compra
                                     </button>
                                     <button type="button" class="btn btn-danger col my-1 mx-3 cartBtn">Limpiar carro</button>
@@ -187,11 +187,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" data-bs-theme="light">
+                    <div class="modal fade modalContainer" id="modalForm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalContainerLabel" aria-hidden="true" data-bs-theme="light">
                         <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Información de pago</h1>
+                                        <h1 class="modal-title fs-5 modalTitle" id="modalContainerLabel">Información de pago</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
@@ -208,7 +208,7 @@
                                                 <label for="inputTelefono" class="form-label">Teléfono de contacto</label>
                                                 <input type="email" class="form-control" id="inputTelefono" aria-describedby="telefonoAyuda" placeholder="(Código de área) + Número" required>
                                             </div>
-                                            <select class="my-4 form-select" aria-label="Default select example" required>
+                                            <select class="my-4 form-select" aria-label="Default select example" id="payments" required>
                                                 <option selected>Selecciona un medio de pago</option>
                                                 <option value="transferencia">Transferencia bancaria</option>
                                                 <option value="efectivo">Efectivo-contado</option>
@@ -248,7 +248,8 @@
                 </div>
             </div>
         </footer>
-        <script type="module" src="../src/js/cart.js"></script>
+        <script type="module" src="../src/js/dynamicCart.js"></script>
+        <script type="module" src="../src/js/themeModeCart.js"></script>
         <script type="module" src="../main.js"></script>
     </body>
 </html>
