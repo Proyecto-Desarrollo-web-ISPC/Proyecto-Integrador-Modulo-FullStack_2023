@@ -91,6 +91,7 @@ p, a, small, label, span, .cartBtn, li, .form-select{
     background-color: #f5f5f5;
 }
 
-div .modalContainer .modalProduct{
-    padding: 10rem;
+div .modalTrigger .modalProduct{
+    width: 25rem;
+    height: 25rem;
 }
