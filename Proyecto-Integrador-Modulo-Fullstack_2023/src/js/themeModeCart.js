@@ -6,7 +6,7 @@ const basicStructure = {
     body: document.getElementById("bodyId"),
     navbar: document.getElementById("navbarId"),
     footer: document.getElementById("footerId"),
-    mainTitle: document.getElementById("mainTitle"),
+    mainTitle: document.getElementsByClassName("mainTitle"),
     h2: document.getElementsByTagName("h2"),
     h3: document.getElementsByTagName("h3"),
     h4: document.getElementsByTagName("h4"),
@@ -15,11 +15,12 @@ const basicStructure = {
     logo: document.getElementById("logo"),
     p: document.getElementsByTagName("p"),
     a: document.getElementsByTagName("a"),
+    li: document.getElementsByTagName("li"),
     label: document.getElementsByTagName("label"),
     footerItem: document.getElementsByClassName("footerItem"),
     card: document.getElementsByClassName("card"),
     // modalContainer: document.querySelector(".modalContainer"), //! Buscarle la forma de poder manipular el modal tanto acá como en las otras páginas
-    // modalTitle: document.querySelector(".modalTitle")
+    // modalTitle: document.getElementsByClassName("modalTitle")
 }
 
 // Creación de objeto para manejo del modo Dark y Light
@@ -31,8 +32,10 @@ const toggleMode = {
         basicStructure.body.style.background = colorBodyLightMode;
         basicStructure.navbar.setAttribute("data-bs-theme", "light");
         basicStructure.footer.style.background = "#f5f5f5";
-        basicStructure.mainTitle.style.color = "#222222";
         // basicStructure.logo.src = "imgPath";
+        for(let i = 0; i < basicStructure.mainTitle.length; i++){
+            basicStructure.mainTitle[i].style.color = "#222222";
+        };
         for(let i = 0; i < basicStructure.h2.length; i++){
             basicStructure.h2[i].style.color = "#222222";
         };
@@ -44,25 +47,28 @@ const toggleMode = {
         };
         for(let i = 0; i < basicStructure.h5.length; i++){
             basicStructure.h5[i].style.color = "#222222";
-        }
+        };
         for(let i = 0; i < basicStructure.h6.length; i++){
             basicStructure.h6[i].style.color = "#222222";
-        }
+        };
         for(let i = 0; i < basicStructure.p.length; i++){
             basicStructure.p[i].style.color = "#222222";
-        }
+        };
         for(let i = 0; i < basicStructure.a.length; i++){
             basicStructure.a[i].style.color = "#222222";
-        }
+        };
+        for(let i = 0; i < basicStructure.li.length; i++){
+            basicStructure.li[i].style.color = "#222222";
+        };
         for(let i = 0; i < basicStructure.label.length; i++){
             basicStructure.label[i].style.color = "#222222";
-        }
+        };
         for(let i = 0; i < basicStructure.card.length; i++){
             basicStructure.card[i].setAttribute("data-bs-theme", "light");
-        }
+        };
         for(let i = 0; i < basicStructure.footerItem.length; i++){
             basicStructure.footerItem[i].style.color = "#222222";
-        }
+        };
         // for(let i = 0; i < basicStructure.modalContainer.length; i++){
         //     basicStructure.modalContainer[i].setAttribute("data-bs-theme", "light"); //! Buscarle la forma de poder manipular el modal tanto acá como en las otras páginas
         // }
@@ -77,8 +83,10 @@ const toggleMode = {
         basicStructure.body.style.background = colorBodyDarkMode;
         basicStructure.navbar.setAttribute("data-bs-theme", "dark");
         basicStructure.footer.style.background = "#222222";
-        basicStructure.mainTitle.style.color = "#f5f5f5";
         // basicStructure.logo.src = "imgPath"               //Agregar path a nuevo logo
+        for(let i = 0; i < basicStructure.mainTitle.length; i++){
+            basicStructure.mainTitle[i].style.color = "#f5f5f5";
+        };
         for(let i = 0; i < basicStructure.h2.length; i++){
             basicStructure.h2[i].style.color = "#f5f5f5";
         };
@@ -99,6 +107,9 @@ const toggleMode = {
         }
         for(let i = 0; i < basicStructure.a.length; i++){
             basicStructure.a[i].style.color = "#f5f5f5";
+        }
+        for(let i = 0; i < basicStructure.li.length; i++){
+            basicStructure.li[i].style.color = "#f5f5f5";
         }
         for(let i = 0; i < basicStructure.label.length; i++){
             basicStructure.label[i].style.color = "#f5f5f5";
@@ -135,7 +146,5 @@ function setLightMode(){
         toggleMode.lightMode();
     })
 }
-
-console.dir(basicStructure.togglerBtnDM);
 
 export {basicStructure, setDarkMode, setLightMode};
