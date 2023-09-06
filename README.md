@@ -1,6 +1,8 @@
 # Proyecto-Integrador-Modulo-FullStack_2023
 
-## Integrantes:
+## Nombre del equipo: DevTeamCba
+
+### Integrantes:
 * Ma. Victoria Urcola
 * Javier Sosa
 * Lucas Nicolas Torres
