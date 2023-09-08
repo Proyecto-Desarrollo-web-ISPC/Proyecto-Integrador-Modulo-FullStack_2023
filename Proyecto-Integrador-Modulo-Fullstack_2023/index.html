@@ -1,116 +1,64 @@
 <!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Tienda de campeones</title>
-  </head>
-  <body id="bodyId">
-    <header class="container-fluid headerClass mx-0 px-0 mb-5 sticky-top">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline" data-bs-theme="light" id="navbarId">
-          <div class="container-fluid">
-              <div class="d-flex flex-wrap">
-                  <a href="">
-                      <img class="mx-2" src="../img/Retro and Vintage Football Club Logo.png" alt="logo" id="logo">
-                  </a>
-              </div>
-              <button class="navbar-toggler my-2 mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse navbarItemsContainer" id="navbarNav">
-                  <ul class="navbar-nav mx-5">
-                      <li class="nav-item navItem mx-2">
-                          <a class="nav-link fw-medium" aria-current="page" href="./pages/products.html">Productos</a>
-                      </li>
-                      <li class="nav-item navItem mx-2">
-                          <a class="nav-link fw-medium" href="./pages/about.html">Nosotros</a>
-                      </li>
-                  </ul>
-                  <div id="loginBtn" class="mx-2 navItem d-block">
-                      <button class="material-symbols-sharp button">
-                          login
-                      </button>
-                  </div>
-                  <div id="logoutBtn" class="mx-2 nav-item d-none">
-                      <button class="material-symbols-sharp button">
-                          logout
-                      </button>
-                  </div>
-                  <div id="cartBtn" class="mx-2 navItem">
-                      <a href="./pages/cart.html" class="material-symbols-sharp button text-decoration-none">
-                          shopping_cart
-                      </a>
-                  </div>
-                  <div id="togglerBtnDM" class="mx-2 navItem d-block">
-                      <button class="material-symbols-sharp button">
-                          dark_mode
-                      </button>
-                  </div>
-                  <div id="togglerBtnLM" class="mx-2 navItem d-none">
-                      <button class="material-symbols-sharp button ">
-                          light_mode
-                      </button>
-                  </div>
-              </div>
-          </div>
-      </nav>
-  </header>
-  <main>
-    <h1 class="mainTitle mx-5 my-3 d-flex justify-content-center" href="#">
-      Tienda de campeones
-    </h1>
-    <section>
-      <div class="introText container-fluid row d-flex justify-content-center my-5">
-        <p class="col-sm-12 col-md-2 col-lg-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore numquam dolorum soluta. Delectus soluta id quos asperiores excepturi repudiandae perferendis, earum, vel, odit quia nulla quod error quidem reiciendis facere?</p>
-        <p class="col-sm-12 col-md-2 col-lg-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore numquam dolorum soluta. Delectus soluta id quos asperiores excepturi repudiandae perferendis, earum, vel, odit quia nulla quod error quidem reiciendis facere?</p>
-        <p class="col-sm-12 col-md-2 col-lg-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore numquam dolorum soluta. Delectus soluta id quos asperiores excepturi repudiandae perferendis, earum, vel, odit quia nulla quod error quidem reiciendis facere?</p>
-      </div>
-      <div class="introCarousel">
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item" data-bs-interval="10000">
-              <img src="./img/products/Alemania/Alemania-1954-primera.svg" class="d-block w-25" alt="carouselImg">
+<html lang="es" data-bs-theme="light" class="html">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="./css/styles.css">
+        <title>Tienda de campeones</title>
+    </head>
+    <body id="bodyId">
+        <header class="container-fluid headerClass mx-0 px-0 mb-5 sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline" id="navbarId">
+            <div class="container-fluid">
+                <div class="d-flex flex-wrap">
+                    <a href="">
+                        <img class="mx-2" src="../img/Retro and Vintage Football Club Logo.png" alt="logo" id="logo">
+                    </a>
+                </div>
+                <button class="navbar-toggler my-2 mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navbarItemsContainer" id="navbarNav">
+                    <ul class="navbar-nav mx-5">
+                        <li class="nav-item navItem mx-2">
+                            <a class="nav-link fw-medium" aria-current="page" href="./pages/products.html">Productos</a>
+                        </li>
+                        <li class="nav-item navItem mx-2">
+                            <a class="nav-link fw-medium" href="./pages/about.html">Nosotros</a>
+                        </li>
+                    </ul>
+                    <div id="loginBtn" class="mx-2 navItem d-block">
+                        <button class="material-symbols-sharp button">
+                            login
+                        </button>
+                    </div>
+                    <div id="logoutBtn" class="mx-2 nav-item d-none">
+                        <button class="material-symbols-sharp button">
+                            logout
+                        </button>
+                    </div>
+                    <div id="cartBtn" class="mx-2 navItem">
+                        <a href="./pages/cart.html" class="material-symbols-sharp button text-decoration-none">
+                            shopping_cart
+                        </a>
+                    </div>
+                    <div id="togglerBtnDM" class="mx-2 navItem d-block">
+                        <button class="material-symbols-sharp button">
+                            dark_mode
+                        </button>
+                    </div>
+                    <div id="togglerBtnLM" class="mx-2 navItem d-none">
+                        <button class="material-symbols-sharp button">
+                            light_mode
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-item active" data-bs-interval="10000">
-              <img src="./img/products/Alemania/Alemania-1954-primera.svg" class="d-block w-25" alt="carouselImg">
-            </div>
-            <div class="carousel-item" data-bs-interval="10000">
-              <img src="./img/products/Alemania/Alemania-1954-primera.svg" class="d-block w-25" alt="carouselImg">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-
-
+        </nav>
+    </header>
     
-  </main>
-  <footer class="mt-5 p-5" id="footerId">
-    <div class="container-fluid row" >
-        <div class="col d-flex align-items-center footerItem fs-5">
-            ©Tienda de campeones - Todos los derechos reservados
-        </div>
-        <div class="col">
-            <ul class="list-unstyled nav-underline">
-                <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="#">Link</a></li>
-                <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="#">Link</a></li>
-                <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="#">Link</a></li>
-            </ul>
-        </div>
-    </div>
-  </footer>
-    <script type="module" src="./src/js/themeModeIndex.js"></script>
-    <script type="module" src="./main.js"></script>
-  </body>
+        <script type="module" src="./src/themeModeIndex.js"></script>
+        <script type="module" src="./main.js"></script>
+    </body>
 </html>

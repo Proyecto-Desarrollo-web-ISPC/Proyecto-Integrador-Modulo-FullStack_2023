@@ -4,7 +4,6 @@ const basicStructure = {
     togglerBtnDM: document.getElementById("togglerBtnDM"),
     loginBtn: document.getElementById("loginBtn"),
     body: document.getElementById("bodyId"),
-    navbar: document.getElementById("navbarId"),
     footer: document.getElementById("footerId"),
     mainTitle: document.getElementsByClassName("mainTitle"),
     h2: document.getElementsByTagName("h2"),
@@ -18,9 +17,7 @@ const basicStructure = {
     li: document.getElementsByTagName("li"),
     label: document.getElementsByTagName("label"),
     footerItem: document.getElementsByClassName("footerItem"),
-    card: document.getElementsByClassName("card"),
-    // modalContainer: document.querySelector(".modalContainer"), //! Buscarle la forma de poder manipular el modal tanto acá como en las otras páginas
-    // modalTitle: document.getElementsByClassName("modalTitle")
+    html: document.getElementsByClassName('html')
 }
 
 // Creación de objeto para manejo del modo Dark y Light
@@ -30,12 +27,11 @@ const toggleMode = {
         basicStructure.togglerBtnDM.setAttribute("class", "mx-2 navItem d-block");
         const colorBodyLightMode = "linear-gradient(120deg, #f5f5f5 10%, #366608 80%)";
         basicStructure.body.style.background = colorBodyLightMode;
-        basicStructure.navbar.setAttribute("data-bs-theme", "light");
         basicStructure.footer.style.background = "#f5f5f5";
         // basicStructure.logo.src = "imgPath";
-        for(let i = 0; i < basicStructure.mainTitle.length; i++){
-            basicStructure.mainTitle[i].style.color = "#222222";
-        };
+        for(let i = 0; i < basicStructure.html.length; i++){
+            basicStructure.html[i].setAttribute("data-bs-theme", "light")
+        }
         for(let i = 0; i < basicStructure.h2.length; i++){
             basicStructure.h2[i].style.color = "#222222";
         };
@@ -63,30 +59,20 @@ const toggleMode = {
         for(let i = 0; i < basicStructure.label.length; i++){
             basicStructure.label[i].style.color = "#222222";
         };
-        for(let i = 0; i < basicStructure.card.length; i++){
-            basicStructure.card[i].setAttribute("data-bs-theme", "light");
-        };
         for(let i = 0; i < basicStructure.footerItem.length; i++){
             basicStructure.footerItem[i].style.color = "#222222";
         };
-        // for(let i = 0; i < basicStructure.modalContainer.length; i++){
-        //     basicStructure.modalContainer[i].setAttribute("data-bs-theme", "light"); //! Buscarle la forma de poder manipular el modal tanto acá como en las otras páginas
-        // }
-        // for(let i = 0; i < basicStructure.modalTitle.length; i++){
-        //     basicStructure.modalTitle[i].style.color = "#222222";
-        // }
     },
     darkMode: function(){
         basicStructure.togglerBtnDM.setAttribute("class", "mx-2 navItem d-none");
         basicStructure.togglerBtnLM.setAttribute("class", "mx-2 navItem d-block");
         const colorBodyDarkMode = "linear-gradient(120deg, #222222 10%, #366608 80%)";
         basicStructure.body.style.background = colorBodyDarkMode;
-        basicStructure.navbar.setAttribute("data-bs-theme", "dark");
         basicStructure.footer.style.background = "#222222";
         // basicStructure.logo.src = "imgPath"               //Agregar path a nuevo logo
-        for(let i = 0; i < basicStructure.mainTitle.length; i++){
-            basicStructure.mainTitle[i].style.color = "#f5f5f5";
-        };
+        for(let i = 0; i < basicStructure.html.length; i++){
+            basicStructure.html[i].setAttribute("data-bs-theme", "dark")
+        }
         for(let i = 0; i < basicStructure.h2.length; i++){
             basicStructure.h2[i].style.color = "#f5f5f5";
         };
@@ -117,18 +103,9 @@ const toggleMode = {
         for(let i = 0; i < basicStructure.p.length; i++){
             basicStructure.p[i].style.color = "#f5f5f5"
         }
-        for(let i = 0; i < basicStructure.card.length; i++){
-            basicStructure.card[i].setAttribute("data-bs-theme", "dark");
-        }
         for(let i = 0; i < basicStructure.footerItem.length; i++){
             basicStructure.footerItem[i].style.color = "#f5f5f5";
         }
-        // for(let i = 0; i < basicStructure.modalContainer.length; i++){
-        //     basicStructure.modalContainer[i].setAttribute("data-bs-theme", "light"); //! Buscarle la forma de poder manipular el modal tanto acá como en las otras páginas
-        // }
-        // for(let i = 0; i < basicStructure.modalTitle.length; i++){
-        //     basicStructure.modalTitle[i].style.color = "#222222";
-        // }
     }
 }
 
