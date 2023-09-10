@@ -13,18 +13,18 @@
             <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline" id="navbarId">
                 <div class="container-fluid">
                     <div class="d-flex flex-wrap">
-                        <a href="../index.html">
-                            <img class="mx-2" src="../img/logo-light.svg" alt="logo" id="logo">
+                        <a href="./index.html">
+                            <img class="mx-2" src="../img/logo-light.png" alt="logo" id="logo">
                         </a>
-                        <h2 class="navbar-brand mainTitle d-flex align-items-center mx-2 my-3">
+                        <p class="navbar-brand mainTitle d-flex flex-wrap align-items-center mx-2 my-3">
                             Tienda de campeones
-                        </h2>
+                        </p>
                     </div>
                     <button class="navbar-toggler my-2 mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse navbarItemsContainer" id="navbarNav">
-                        <ul class="navbar-nav mx-5">
+                        <ul class="navbar-nav mx-5 list-unstyled">
                             <li class="nav-item navItem mx-2">
                                 <a class="nav-link fw-medium" aria-current="page" href="./index.html">Inicio</a>
                             </li>
@@ -32,31 +32,33 @@
                                 <a class="nav-link fw-medium" href="#">Nosotros</a>
                             </li>
                         </ul>
-                        <div id="loginBtn" class="mx-2 navItem d-block">
-                            <button class="material-symbols-sharp button">
-                                login
-                            </button>
-                        </div>
-                        <div id="logoutBtn" class="mx-2 nav-item d-none">
-                            <button class="material-symbols-sharp button">
-                                logout
-                            </button>
-                        </div>
-                        <div id="cartBtn" class="mx-2 navItem">
-                            <a href="./cart.html" class="material-symbols-sharp button text-decoration-none">
-                                shopping_cart
-                            </a>
-                        </div>
-                        <div id="togglerBtnDM" class="mx-2 navItem d-block">
-                            <button class="material-symbols-sharp button">
-                                dark_mode
-                            </button>
-                        </div>
-                        <div id="togglerBtnLM" class="mx-2 navItem d-none">
-                            <button class="material-symbols-sharp button ">
-                                light_mode
-                            </button>
-                        </div>
+                        <ul class="list-unstyled mx-2 my-0 d-flex flex-row">
+                            <li id="loginBtn" class="mx-2 navItem d-block">
+                                <button class="material-symbols-sharp button">
+                                    login
+                                </button>
+                            </li>
+                            <li id="logoutBtn" class="mx-2 nav-item d-none">
+                                <button class="material-symbols-sharp button">
+                                    logout
+                                </button>
+                            </li>
+                            <li class="mx-2 navItem">
+                                <a href="./cart.html" class="material-symbols-sharp button text-decoration-none" id="cartBtn">
+                                    shopping_cart
+                                </a>
+                            </li>
+                            <li id="togglerBtnDM" class="mx-2 navItem d-block">
+                                <button class="material-symbols-sharp button">
+                                    dark_mode
+                                </button>
+                            </li>
+                            <li id="togglerBtnLM" class="mx-2 navItem d-none">
+                                <button class="material-symbols-sharp button ">
+                                    light_mode
+                                </button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </nav>
@@ -64,7 +66,7 @@
         <main>
             <h1 class="mx-5 mainTitle">Nuestros productos</h1>
             <div class="mx-5 row d-flex flex-wrap justify-content-between my-5">
-                <section class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
                     <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalArgentina">
                     Argentina
                     <img src="#" alt="argentina">
@@ -78,7 +80,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="argentina">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta Argentina 1978</h5>
@@ -90,7 +92,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="argentina">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta Argentina 1986</h5>
@@ -102,7 +104,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="argentina">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta Argentina 2002</h5>
@@ -125,7 +127,7 @@
                     </div>
                 </section>
 
-                <section class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
                     <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalBrasil">
                     Brasil
                     <img src="#" alt="brasil">
@@ -139,7 +141,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="brasil">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta Brasil</h5>
@@ -151,7 +153,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="brasil">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta Brasil</h5>
@@ -163,7 +165,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="brasil">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta Brasil</h5>
@@ -186,7 +188,7 @@
                     </div>
                 </section>
                 
-                <section class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
                     <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#alemaniaModal">
                     Alemania
                     <img src="#" alt="alemania">
@@ -200,7 +202,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="alemania">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta Alemania</h5>
@@ -212,7 +214,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="alemania">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta Alemania</h5>
@@ -224,7 +226,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="alemania">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta Alemania</h5>
@@ -247,7 +249,7 @@
                     </div>
                 </section>
 
-                <section class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
                     <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalEspana">
                     España
                     <img src="#" alt="espana">
@@ -261,7 +263,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="espana">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta España</h5>
@@ -273,7 +275,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="espana">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta España</h5>
@@ -285,7 +287,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="espana">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta España</h5>
@@ -308,11 +310,11 @@
                     </div>
                 </section>
 
-                <div class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center">
                     Imagen de copa
                 </div>
 
-                <section class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
                     <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalItalia">
                     Italia
                     <img src="#" alt="italia">
@@ -326,7 +328,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="italia">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta Italia</h5>
@@ -338,7 +340,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="italia">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta Italia</h5>
@@ -350,7 +352,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Camiseta Italia</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="italia">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta Italia</h5>
@@ -373,7 +375,7 @@
                     </div>
                 </section>
 
-                <section class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
                     <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalFrancia">
                     Francia
                     <img src="#" alt="francia">
@@ -387,7 +389,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="francia">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta de Francia</h5>
@@ -399,7 +401,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="francia">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta de Francia</h5>
@@ -411,7 +413,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="francia">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta de Francia</h5>
@@ -434,7 +436,7 @@
                     </div>
                 </section>
 
-                <section class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
                     <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalInglaterra">
                     Inglaterra
                     <img src="#" alt="inglaterra">
@@ -448,7 +450,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="inglaterra">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta de Inglaterra</h5>
@@ -460,7 +462,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="inglaterra">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta de Inglaterra</h5>
@@ -472,7 +474,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="inglaterra">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta de Inglaterra</h5>
@@ -495,7 +497,7 @@
                     </div>
                 </section>
 
-                <section class="col-4 p-3 mx-0 my-2 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
                     <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalUruguay">
                     Uruguay
                     <img src="#" alt="uruguay">
@@ -509,7 +511,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="uruguay">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta Uruguay</h5>
@@ -521,7 +523,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="uruguay">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta Uruguay</h5>
@@ -533,7 +535,7 @@
                                                 <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
                                             </div>
                                         </div>
-                                        <div class="card productCard" style="width: 18rem;">
+                                        <div class="card productCard my-3" style="width: 18rem;">
                                             <img src="#" class="card-img-top" alt="uruguay">
                                             <div class="card-body">
                                                 <h5 class="card-title">Camiseta Uruguay</h5>

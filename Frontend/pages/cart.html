@@ -14,9 +14,9 @@
                 <div class="container-fluid">
                     <div class="d-flex flex-wrap">
                         <a href="./index.html">
-                            <img class="mx-2" src="../img/logo-light.svg" alt="logo" id="logo">
+                            <img class="mx-2" src="../img/logo-light.png" alt="logo" id="logo">
                         </a>
-                        <p class="navbar-brand mainTitle d-flex align-items-center mx-2 my-3">
+                        <p class="navbar-brand mainTitle d-flex flex-wrap align-items-center mx-2 my-3">
                             Tienda de campeones
                         </p>
                     </div>
@@ -24,7 +24,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse navbarItemsContainer" id="navbarNav">
-                        <ul class="navbar-nav mx-5">
+                        <ul class="navbar-nav mx-5 list-unstyled">
                             <li class="nav-item navItem mx-2">
                                 <a class="nav-link fw-medium" aria-current="page" href="./index.html">Inicio</a>
                             </li>
@@ -35,31 +35,28 @@
                                 <a class="nav-link fw-medium" href="#">Nosotros</a>
                             </li>
                         </ul>
-                        <div id="loginBtn" class="mx-2 navItem d-block">
-                            <button class="material-symbols-sharp button">
-                                login
-                            </button>
-                        </div>
-                        <div id="logoutBtn" class="mx-2 nav-item d-none">
-                            <button class="material-symbols-sharp button">
-                                logout
-                            </button>
-                        </div>
-                        <!-- <div id="cartBtn" class="mx-2 navItem">
-                            <button class="material-symbols-sharp button">
-                                shopping_cart
-                            </button>
-                        </div> -->
-                        <div id="togglerBtnDM" class="mx-2 navItem d-block">
-                            <button class="material-symbols-sharp button">
-                                dark_mode
-                            </button>
-                        </div>
-                        <div id="togglerBtnLM" class="mx-2 navItem d-none">
-                            <button class="material-symbols-sharp button ">
-                                light_mode
-                            </button>
-                        </div>
+                        <ul class="list-unstyled mx-2 my-0 d-flex flex-row">
+                            <li id="loginBtn" class="mx-2 navItem d-block">
+                                <button class="material-symbols-sharp button">
+                                    login
+                                </button>
+                            </li>
+                            <li id="logoutBtn" class="mx-2 nav-item d-none">
+                                <button class="material-symbols-sharp button">
+                                    logout
+                                </button>
+                            </li>
+                            <li id="togglerBtnDM" class="mx-2 navItem d-block">
+                                <button class="material-symbols-sharp button">
+                                    dark_mode
+                                </button>
+                            </li>
+                            <li id="togglerBtnLM" class="mx-2 navItem d-none">
+                                <button class="material-symbols-sharp button ">
+                                    light_mode
+                                </button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </nav>
@@ -71,7 +68,7 @@
                 Tus camisetas:
             </h1>
             <section class="container-fluid d-flex align-items-start justify-content-evenly flex-wrap flex-row">
-                <div class="col-12 col-sm-8 col-md-7 mx-1 container container-fluid">
+                <div class="col-xs-10 col-sm-10 col-md-7 mx-1 container container-fluid">
                     <div class="card mb-4 mt-4">
                         <div class="card-header py-4">
                             <h5 class="mb-0">Artículos seleccionados</h5>
@@ -81,108 +78,127 @@
                         <!--! Row 1  -->
                         <div class="card-body" id="cardContainer">
                             <div class="row py-3 mb-3 productItem">
-                                <div class="col-4">
-                                    <div class="bg-image cardImg rounded">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 productImg">
+                                    <div class="bg-image cardImg rounded d-flex align-items-center">
                                         <img class="w-100 rounded" src="../img/products/Alemania/Alemania-1954-primera.svg" alt="producto">
                                     </div>
                                 </div>
-                                <div class="col-5">
-                                    <h6>Selección de Alemania 1954</h6>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 productDetails">
+                                    <h6 class="mt-2">Selección de Alemania 1954</h6>
                                     <small>Camiseta titular</small>
                                     <ul class="list-unstyled my-2">
                                         <li>$4900</li>
                                     </ul>
-                                    <ul class="list-unstyled mt-5 ">
-                                        <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnDeleteItem">
-                                            delete
-                                        </button>
-                                        <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnReduceItem">
-                                            remove
-                                        </button>
-                                        <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnAddItem">
-                                            add
-                                        </button>
+                                    <ul class="col-xs-12 col-sm-12 list-unstyled mt-5 mx-3 d-flex flex-row">
+                                        <li>
+                                            <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnDeleteItem">
+                                                delete
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnReduceItem">
+                                                remove
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnAddItem">
+                                                add
+                                            </button>
+                                        </li>
                                     </ul>
                                 </div>
-                                <div class="col-3 px-4">
-                                    <label for="inputAmount">Cantidad:</label>
-                                    <input type="text" class="form-control mb-2 mx-1" placeholder="¿Cuántos?" value="1" id="inputAmount">
-                                    <label for="inputPrice">Valor total:</label>
-                                    <input type="text" class="form-control mt-2 mx-1" id="inputPrice" value="$4900" disabled>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 px-4 mt-2 productDetails-A">
+                                    <label for="inputAmount-ItemA">Cantidad:</label> 
+                                    <input type="text" class="form-control mb-2 mx-1 inputAmount" placeholder="¿Cuántos?" value="1" id="inputAmount-ItemA">
+                                    <label for="inputPrice-ItemA">Valor total:</label> 
+                                    <input type="text" class="form-control mt-2 mx-1 inputPrice" id="inputPrice-ItemA" value="$4900" disabled>
+                                    <!--! Los id's se deben cambiar en el siguiente sprint para que correspondan con el producto que se liste dinámicamente -->
                                 </div>
                             </div>
-                            <!--! hr tag -->
                             <hr>
-                            <!-- Siguientes ítems -->
+                            <!--! Row 2 -->
                             <div class="row py-3 mb-3 productItem">
-                                <div class="col-4">
-                                    <div class="bg-image cardImg rounded">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 productImg">
+                                    <div class="bg-image cardImg rounded d-flex align-items-center">
                                         <img class="w-100 rounded" src="../img/products/Alemania/Alemania-1954-primera.svg" alt="producto">
                                     </div>
                                 </div>
-                                <div class="col-5">
-                                    <h6>Selección de Alemania 1954</h6>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 productDetails">
+                                    <h6 class="mt-2">Selección de Alemania 1954</h6>
                                     <small>Camiseta titular</small>
                                     <ul class="list-unstyled my-2">
                                         <li>$4900</li>
                                     </ul>
-                                    <ul class="list-unstyled mt-5 ">
-                                        <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnDeleteItem">
-                                            delete
-                                        </button>
-                                        <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnReduceItem">
-                                            remove
-                                        </button>
-                                        <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnAddItem">
-                                            add
-                                        </button>
+                                    <ul class="col-xs-12 col-sm-12 list-unstyled mt-5 mx-3 d-flex flex-row">
+                                        <li>
+                                            <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnDeleteItem">
+                                                delete
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnReduceItem">
+                                                remove
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnAddItem">
+                                                add
+                                            </button>
+                                        </li>
                                     </ul>
                                 </div>
-                                <div class="col-3 px-4">
-                                    <label for="inputAmount">Cantidad:</label>
-                                    <input type="text" class="form-control mb-2 mx-1" placeholder="¿Cuántos?" value="1" id="inputAmount">
-                                    <label for="inputPrice">Valor total:</label>
-                                    <input type="text" class="form-control mt-2 mx-1" id="inputPrice" value="$4900" disabled>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 px-4 mt-2 productDetails-B">
+                                    <label for="inputAmount-itemB">Cantidad:</label>
+                                    <input type="text" class="form-control mb-2 mx-1" placeholder="¿Cuántos?" value="1" id="inputAmount-itemB">
+                                    <label for="inputPrice-ItemB">Valor total:</label>
+                                    <input type="text" class="form-control mt-2 mx-1" id="inputPrice-ItemB" value="$4900" disabled>
+                                    <!--! Los id's se deben cambiar en el siguiente sprint para que correspondan con el producto que se liste dinámicamente -->
                                 </div>
                             </div>
 
                             <hr>
                             <div class="row py-3 mb-3 productItem">
-                                <div class="col-4">
-                                    <div class="bg-image cardImg rounded">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 productImg">
+                                    <div class="bg-image cardImg rounded d-flex align-items-center">
                                         <img class="w-100 rounded" src="../img/products/Alemania/Alemania-1954-primera.svg" alt="producto">
                                     </div>
                                 </div>
-                                <div class="col-5">
-                                    <h6>Selección de Alemania 1954</h6>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 productDetails">
+                                    <h6 class="mt-2">Selección de Alemania 1954</h6>
                                     <small>Camiseta titular</small>
                                     <ul class="list-unstyled my-2">
                                         <li>$4900</li>
                                     </ul>
-                                    <ul class="list-unstyled mt-5 ">
-                                        <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnDeleteItem">
-                                            delete
-                                        </button>
-                                        <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnReduceItem">
-                                            remove
-                                        </button>
-                                        <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnAddItem">
-                                            add
-                                        </button>
+                                    <ul class="col-xs-12 col-sm-12 list-unstyled mt-5 mx-3 d-flex flex-row">
+                                        <li>
+                                            <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnDeleteItem">
+                                                delete
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnReduceItem">
+                                                remove
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="mt-1 me-1 mb-1 p-2 material-symbols-sharp rounded btnAddItem">
+                                                add
+                                            </button>
+                                        </li>
                                     </ul>
                                 </div>
-                                <div class="col-3 px-4">
-                                    <label for="inputAmount">Cantidad:</label>
-                                    <input type="text" class="form-control mb-2 mx-1" placeholder="¿Cuántos?" value="1" id="inputAmount">
-                                    <label for="inputPrice">Valor total:</label>
-                                    <input type="text" class="form-control mt-2 mx-1" id="inputPrice" value="$4900" disabled>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 px-4 mt-2 productDetails-C">
+                                    <label for="inputAmount-itemC">Cantidad:</label>
+                                    <input type="text" class="form-control mb-2 mx-1" placeholder="¿Cuántos?" value="1" id="inputAmount-itemC">
+                                    <label for="inputPrice-itemC">Valor total:</label>
+                                    <input type="text" class="form-control mt-2 mx-1" id="inputPrice-itemC" value="$4900" disabled>
+                                    <!--! Los id's se deben cambiar en el siguiente sprint para que correspondan con el producto que se liste dinámicamente -->
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-8 col-md-4 container container-fluid d-flex flex-column justify-content-between">
+                <div class="col-12 col-sm-10 col-md-4 mx-1 container container-fluid d-flex flex-column justify-content-between">
                     <div class="card">
                         <h5 class="card-header p-3">Resumen del carro</h5>
                         <div class="card-body">
@@ -199,7 +215,7 @@
                                 <hr class="my-4">
                                 <div class="d-flex flex-column my-3" id="outputSubtotal">
                                     <!-- subtotal aparece acá -->
-                                    
+                                    <h6>$5000</h6>
                                 </div>
                             </div>
                             <div class="row">
@@ -235,7 +251,7 @@
                         <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5 modalTitle" id="modalContainerLabel">Información de pago</h1>
+                                        <p class="modal-title fs-5 modalTitle" id="modalContainerLabel">Información de pago</p>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
@@ -252,8 +268,8 @@
                                                 <label for="inputTelefono" class="form-label">Teléfono de contacto</label>
                                                 <input type="email" class="form-control" id="inputTelefono" aria-describedby="inputTelefono" placeholder="(Código de área) + Número" required>
                                             </div>
-                                            <select class="my-4 form-select" aria-label="Default select example" id="payments" multiple size="4" required>
-                                                <option selected value="Selecciona un medio de pago"></option>
+                                            <select class="my-4 form-select" aria-label="Default select example" id="payments">
+                                                <option selected label="Selecciona un medio de pago"></option>
                                                 <option value="transferencia">Transferencia bancaria</option>
                                                 <option value="efectivo">Efectivo-contado</option>
                                                 <option value="credito">Crédito</option>
@@ -268,10 +284,6 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <!-- <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                                        <button type="submit" class="btn btn-success">Finalizar compra</button>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>

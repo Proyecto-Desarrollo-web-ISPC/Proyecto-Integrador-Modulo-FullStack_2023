@@ -51,6 +51,14 @@ p, a, small, label, span, .cartBtn, li, .form-select{
     background: transparent;
 }
 
+#cartBtn{
+    color: #222222;
+}
+
+#footerId div div ul li .footerItem{
+    color: #222222;
+}
+
 .btnAddItem, .btnReduceItem, .btnDeleteItem{
     border: none;
 }
@@ -67,10 +75,8 @@ p, a, small, label, span, .cartBtn, li, .form-select{
 }
 
 
-#footerId div div ul li .footerItem{
-    color: #222222;
-}
 
+/* Cart.html */
 #buttonDelete{
     background-color: #dc3545;
 }
@@ -94,4 +100,11 @@ p, a, small, label, span, .cartBtn, li, .form-select{
 div .modalTrigger .modalProduct{
     width: 25rem;
     height: 25rem;
+}
+
+@media screen and (max-width: 992px) {
+    .modalTrigger{
+        display: grid;
+        grid-template-rows: repeat(1fr, 100%);
+    }
 }

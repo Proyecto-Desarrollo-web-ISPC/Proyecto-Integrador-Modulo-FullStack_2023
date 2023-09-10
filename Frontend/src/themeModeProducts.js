@@ -28,7 +28,7 @@ const toggleMode = {
         const colorBodyLightMode = "linear-gradient(120deg, #f5f5f5 10%, #366608 80%)";
         basicStructure.body.style.background = colorBodyLightMode;
         basicStructure.footer.style.background = "#f5f5f5";
-        basicStructure.logo.src = "../img/logo-dark.svg";
+        basicStructure.logo.src = "../img/logo-light.png";
         for(let i = 0; i < basicStructure.html.length; i++){
             basicStructure.html[i].setAttribute("data-bs-theme", "light")
         }
@@ -69,7 +69,7 @@ const toggleMode = {
         const colorBodyDarkMode = "linear-gradient(120deg, #222222 10%, #366608 80%)";
         basicStructure.body.style.background = colorBodyDarkMode;
         basicStructure.footer.style.background = "#222222";
-        basicStructure.logo.src = "../img/logo-dark.svg";               //Agregar path a nuevo logo
+        basicStructure.logo.src = "../img/logo-dark.png";               //Agregar path a nuevo logo
         for(let i = 0; i < basicStructure.html.length; i++){
             basicStructure.html[i].setAttribute("data-bs-theme", "dark")
         }
