@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light" class="html">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/styles.css">
+        <title>Tienda de campeones</title>
+    </head>
+    <body id="bodyId">
+        <header class="container-fluid headerClass mx-0 px-0 mb-5">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline" id="navbarId">
+                <div class="container-fluid">
+                    <div class="d-flex flex-wrap">
+                        <a href="./index.html">
+                            <img class="mx-2" src="../img/logo-light.png" alt="logo" id="logo">
+                        </a>
+                        <p class="navbar-brand mainTitle d-flex flex-wrap align-items-center mx-2 my-3">
+                            Tienda de campeones
+                        </p>
+                    </div>
+                    <button class="navbar-toggler my-2 mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse navbarItemsContainer" id="navbarNav">
+                        <ul class="navbar-nav mx-5 list-unstyled">
+                            <li class="nav-item navItem mx-2">
+                                <a class="nav-link fw-medium" aria-current="page" href="./index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item navItem mx-2">
+                                <a class="nav-link fw-medium" href="#">Nosotros</a>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled mx-2 my-0 d-flex flex-row">
+                            <li id="loginBtn" class="mx-2 navItem d-block">
+                                <button class="material-symbols-sharp button">
+                                    login
+                                </button>
+                            </li>
+                            <li id="logoutBtn" class="mx-2 nav-item d-none">
+                                <button class="material-symbols-sharp button">
+                                    logout
+                                </button>
+                            </li>
+                            <li class="mx-2 navItem">
+                                <a href="./cart.html" class="material-symbols-sharp button text-decoration-none" id="cartBtn">
+                                    shopping_cart
+                                </a>
+                            </li>
+                            <li id="togglerBtnDM" class="mx-2 navItem d-block">
+                                <button class="material-symbols-sharp button">
+                                    dark_mode
+                                </button>
+                            </li>
+                            <li id="togglerBtnLM" class="mx-2 navItem d-none">
+                                <button class="material-symbols-sharp button ">
+                                    light_mode
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h1 class="mx-5 mainTitle">Nuestros productos</h1>
+            <div class="mx-5 row d-flex flex-wrap justify-content-between my-5">
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalArgentina">
+                    Argentina
+                    <img src="#" alt="argentina">
+                    </button>
+                    <div>
+                        <div class="modal fade cardContainer" id="modalArgentina" tabindex="-1" aria-labelledby="argentinaModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title fs-5" id="argentinaModalLabel">Selección Argentina</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 1978</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 1986</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="argentina">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Argentina 2002</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" class="btn btn-primary">Ir al carro</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalBrasil">
+                    Brasil
+                    <img src="#" alt="brasil">
+                    </button>
+                    <div>
+                        <div class="modal fade cardContainer" id="modalBrasil" tabindex="-1" aria-labelledby="modalBrasilLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title fs-5" id="modalBrasilLabel">Selección de Brasil</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="brasil">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Brasil</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="brasil">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Brasil</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="brasil">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Brasil</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" class="btn btn-primary">Ir al carro</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#alemaniaModal">
+                    Alemania
+                    <img src="#" alt="alemania">
+                    </button>
+                    <div>
+                        <div class="modal fade cardContainer" id="alemaniaModal" tabindex="-1" aria-labelledby="alemaniaModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title fs-5" id="alemaniaModalLabel">Selección Alemana</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="alemania">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Alemania</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="alemania">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Alemania</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="alemania">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Alemania</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" class="btn btn-primary">Ir al carro</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalEspana">
+                    España
+                    <img src="#" alt="espana">
+                    </button>
+                    <div>
+                        <div class="modal fade cardContainer" id="modalEspana" tabindex="-1" aria-labelledby="modalEspanaLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title fs-5" id="modalEspanaLabel">Selección de Espana</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="espana">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta España</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="espana">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta España</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="espana">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta España</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" class="btn btn-primary">Ir al carro</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center">
+                    Imagen de copa
+                </div>
+
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalItalia">
+                    Italia
+                    <img src="#" alt="italia">
+                    </button>
+                    <div>
+                        <div class="modal fade cardContainer" id="modalItalia" tabindex="-1" aria-labelledby="modalItaliaLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title fs-5" id="modalItaliaLabel">Selección Italiana</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="italia">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Italia</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="italia">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Italia</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Camiseta Italia</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="italia">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Italia</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" class="btn btn-primary">Ir al carro</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalFrancia">
+                    Francia
+                    <img src="#" alt="francia">
+                    </button>
+                    <div>
+                        <div class="modal fade cardContainer" id="modalFrancia" tabindex="-1" aria-labelledby="modalFranciaLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title fs-5" id="modalFranciaLabel">Selección de Francia</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="francia">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta de Francia</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="francia">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta de Francia</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="francia">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta de Francia</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" class="btn btn-primary">Ir al carro</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalInglaterra">
+                    Inglaterra
+                    <img src="#" alt="inglaterra">
+                    </button>
+                    <div>
+                        <div class="modal fade cardContainer" id="modalInglaterra" tabindex="-1" aria-labelledby="modalInglaterraLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title fs-5" id="modalInglaterraLabel">Selección Inglesa</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="inglaterra">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta de Inglaterra</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="inglaterra">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta de Inglaterra</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="inglaterra">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta de Inglaterra</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" class="btn btn-primary">Ir al carro</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3 mx-0 my-0 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                    <button type="button" class="btn btn-primary modalProduct" data-bs-toggle="modal" data-bs-target="#modalUruguay">
+                    Uruguay
+                    <img src="#" alt="uruguay">
+                    </button>
+                    <div>
+                        <div class="modal fade cardContainer" id="modalUruguay" tabindex="-1" aria-labelledby="modalUruguayLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title fs-5" id="modalUruguayLabel">Selección Uruguaya</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="uruguay">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Uruguay</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="uruguay">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Uruguay</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                        <div class="card productCard my-3" style="width: 18rem;">
+                                            <img src="#" class="card-img-top" alt="uruguay">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Camiseta Uruguay</h5>
+                                                <ul>
+                                                    <li>1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                </ul>
+                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                                        <a href="./cart.html" class="btn btn-primary">Ir al carro</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="mt-5 p-5" id="footerId">
+            <div class="container-fluid row" >
+                <div class="col d-flex align-items-center footerItem fs-5">
+                    ©Tienda de campeones - Todos los derechos reservados
+                </div>
+                <div class="col">
+                    <ul class="list-unstyled nav-underline">
+                        <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="#">Link</a></li>
+                        <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="#">Link</a></li>
+                        <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="#">Link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script type="module" src="../src/themeModeProducts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    </body>
+</html>
