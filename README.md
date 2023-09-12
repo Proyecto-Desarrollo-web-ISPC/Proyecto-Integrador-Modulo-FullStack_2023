@@ -4,9 +4,10 @@
 
 ### Integrantes:
 * Ma. Victoria Urcola
-* Gustavo Toscano
 * Cristian Emanuel Recabarren
 * Lautaro Pena
 * Pablo Scarponi
 * Denisse Araceli Sabeff
+* Gustavo Ariel Toscano
 * Gastón Rosales
+
