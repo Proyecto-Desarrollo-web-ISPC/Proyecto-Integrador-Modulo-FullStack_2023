@@ -4,12 +4,15 @@
 
 ### Integrantes:
 * Ma. Victoria Urcola
-* Javier Sosa
-* Lucas Nicolas Torres
 * Gustavo Toscano
 * Cristian Emanuel Recabarren
 * Lautaro Pena
-* Sanchez Abril
+* Gaston Rosales
 * Pablo Scarponi
 * Denisse Araceli Sabeff
+
+* Ex Integrantes :(abandonaron el equipo)
 * Joaquín Sosa
+* Javier Sosa
+* Lucas Nicolas Torres
+* Sanchez Abril
