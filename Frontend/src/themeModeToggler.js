@@ -1,4 +1,4 @@
-// Creación de selector de elementos de navegación y estéticos de la estructura del carro
+// Creación de selector de elementos de navegación y HTML de la estructura 
 const basicStructure = {
     togglerBtnLM: document.getElementById("togglerBtnLM"),
     togglerBtnDM: document.getElementById("togglerBtnDM"),
@@ -20,7 +20,7 @@ const basicStructure = {
     html: document.getElementsByClassName('html')
 }
 
-// Creación de objeto para manejo del modo Dark y Light
+// Creación de objeto para funciones del modo Dark y Light
 const toggleMode = {
     lightMode: function(){
         basicStructure.togglerBtnLM.setAttribute("class", "mx-2 navItem d-none");
@@ -109,17 +109,5 @@ const toggleMode = {
     }
 }
 
-// Ejecución de modos de tema
-setDarkMode();
-function setDarkMode(){
-    basicStructure.togglerBtnDM.addEventListener("click", () => {
-        toggleMode.darkMode();
-    });
-}
-
-setLightMode();
-function setLightMode(){
-    basicStructure.togglerBtnLM.addEventListener("click", () => {
-        toggleMode.lightMode();
-    })
-}
+// Exportación de objetos
+export {toggleMode, basicStructure} 
