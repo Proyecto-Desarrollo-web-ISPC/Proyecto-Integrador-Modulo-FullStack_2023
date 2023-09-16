@@ -8,6 +8,6 @@
 * Lautaro Pena
 * Pablo Scarponi
 * Denisse Araceli Sabeff
+* Gaston Rosales
 * Gustavo Ariel Toscano
 * Gastón Rosales
-
