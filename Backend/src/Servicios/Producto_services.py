@@ -48,25 +48,28 @@ def crear_producto ():
             
             if respuesta == "no":
                 break
-            elif respuesta == "sí" or respuesta == "si":
-                talle = input("Indique el talle del producto: ")
-                validacion_campo(talle)
-                talle1.talle = talle
+            elif respuesta == "sí" or respuesta == "si":   
+                talle2 = input("Indique el talle del producto: ")
+                validacion_campo(talle2)
+                talle_nuevo = Talle()
+                talle_nuevo.talle = talle2
                 stock = float(input("Ingrese la cantidad (solo números) en stock del talle de este producto: "))
                 if stock < 0:
                     raise ValueError(f"El Stock no debe ser menor a 0")
-                id_talle = buscar_id_talle(talle)
-                if id_talle is None:
+                id_talle2 = buscar_id_talle(talle2)
+                if id_talle2 is None:
                     return print("No se encontró ese talle en nuestra base de datos, por favor, agregue primero el talle")
-                talle1.ID_talle = id_talle
-                nuevo_precio=float(input("Ingrese el precio del producto en este talle: "))
-                validacion_numero(precio,"PRECIO")  
-                prod_talle.ID_talle = id_talle
-                prod_talle.stock = stock
-                insert_producto_talle(id_producto, id_talle, stock)
-                modify_precio(nuevo_precio,id_producto)
-                producto1.precio= nuevo_precio
-                print (f"El producto: {producto1.nombre_producto} de TALLE: {talle1.talle} fue agregado correctamente a {producto1.precio} pesos")
+                talle_nuevo.ID_talle = id_talle2
+                prod_talle2= Producto_talle()
+                prod_talle2.ID_talle = id_talle2
+                prod_talle2.stock = stock
+                result = buscar_id_producto_talle(id_talle2,id_producto)
+                if result is None:
+                 insert_producto_talle(id_producto, id_talle2, stock)
+                else:
+                 nuevo_stock = stock
+                 modify_stock(nuevo_stock,id_producto,id_talle2)
+                print (f"El producto: {producto1.nombre_producto} de TALLE: {talle_nuevo.talle} fue agregado correctamente a {producto1.precio} pesos")
             else:
                 print("Respuesta no válida. Por favor, responda 'Sí' o 'No'.")  
         

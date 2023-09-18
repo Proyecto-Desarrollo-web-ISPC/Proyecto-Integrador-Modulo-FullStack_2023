@@ -113,7 +113,7 @@ def modify_nombre_producto(nombre_nuevo,id_producto):
 def all_products():
      try:
         connection.connect()
-        query = "SELECT  p.nombre_producto, p.precio, t.talle, pt.stock FROM productos p INNER JOIN productos_talles pt ON p.id_producto = pt.id_producto INNER JOIN talles t ON pt.id_talle = t.id_talle WHERE pt.stock > 0 order by pt.ID_producto ;"
+        query = "SELECT  p.nombre_producto, p.precio, t.talle, pt.stock FROM productos p INNER JOIN productos_talles pt ON p.id_producto = pt.id_producto INNER JOIN talles t ON pt.id_talle = t.id_talle WHERE pt.stock > 0 order by ID_producto_talle ;"
         connection.cursor.execute(query)
         resultado = connection.cursor.fetchall()
         if resultado:
