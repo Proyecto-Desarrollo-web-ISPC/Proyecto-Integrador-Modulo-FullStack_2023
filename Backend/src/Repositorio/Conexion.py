@@ -34,9 +34,18 @@ class DatabaseConnection:
     def close(self):
         if self.cursor:
             self.cursor.close()
+            
         if self.connection:
             self.connection.close()
             print("Conexión cerrada.")
     
     
+    #completar los datos con sus datos personales
     
+connection = DatabaseConnection(
+host='localhost',
+user='root', 
+password='root',
+port='3306',
+database='toska'
+)

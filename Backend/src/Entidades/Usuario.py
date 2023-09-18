@@ -1,18 +1,16 @@
-from Enums import Rol_enum
+from Enums.Rol_enum import Rol
 class Usuario:
-    def __init__(self,ID_usuario,nombre,apellido,email,dni,domicilio,Rol):
-        self._ID_usuario = ID_usuario
-        self._nombre = nombre
-        self._apellido = apellido
-        self._email = email
-        self._dni = dni
-        self._domicilio = domicilio
-        self._Rol = Rol
+    def __init__(self):
+        
         self._pedidos = []
         
     @property
     def ID_usuario(self):
         return self._ID_usuario
+    
+    @ID_usuario.setter
+    def ID_usuario(self,nombre_nuevo):
+        self._ID_usuario = nombre_nuevo
     
     #decorador @property se usa cuando quieres realizar algún tipo de lógica de cálculo o validación al acceder al atributo
     @property
@@ -37,7 +35,7 @@ class Usuario:
     
     @email.setter
     def email(self,email_nuevo):
-        self._Email = email_nuevo
+        self._email = email_nuevo
     
     
     @property
@@ -56,24 +54,25 @@ class Usuario:
     def domicilio(self,domicilio_nuevo):
         self._domicilio = domicilio_nuevo
         
-    @property
-    def Rol(self):
-        return self._Rol
     
-    @Rol.setter
-    def Rol(self,Rol_nuevo):
-        self._Rol = Rol_nuevo
+    def get_rol(self):
+        return self._rol
+
     
-    #en este caso no  hace falta usar el decorador ya que es una lista vacia y actua como un atributo de instancia normal
-    #pero lo dejo a modo guia para mis compañeros   
-    @property
+    def set_rol(self, rol):
+        if isinstance(rol, Rol):
+            self._rol = rol
+        else:
+            raise ValueError("El valor de rol debe ser un objeto de la clase Rol")
+    
+   
     def get_pedidos(self):
         return self._pedidos
     
     
     #en el metodo str evito mostrar dni ya que por el momento lo usare de login para cada cliente en la consola  
     def __str__(self):
-     return f"Usuario(ID: {self.ID_usuario}, Nombre: {self.nombre}, Apellido: {self.apellido}, Email: {self.email}, Domicilio: {self.domicilio}, Rol: {self.Rol})"
+     return f"Usuario(ID: {self.ID_usuario}, Nombre: {self.nombre}, Apellido: {self.apellido}, Email: {self.email}, Domicilio: {self.domicilio}, Rol: {self.get_rol().value})"
     
 
     
