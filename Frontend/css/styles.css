@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.material-symbols-sharp {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 30,
+    'opsz' 40
+}
+
+#bodyId{
+    /* #dfe9f3 */
+    background: linear-gradient(120deg, #f5f5f5 10%, #366608 80%);
+    /* background-image: url("../img/background.jpg"); */
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins', sans-serif;
+}
+p, a, small, label, span, .cartBtn, li, .form-select{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#logo{
+    width: 5rem;
+    height: 5rem;
+}
+
+.mainTitle{
+    vertical-align: middle;
+}
+
+.navbarItemsContainer{
+    display: flex;
+    justify-content: end;
+}
+
+.button{
+    border: none;
+    padding: 8px;
+    background: transparent;
+}
+
+#cartBtn{
+    color: #222222;
+}
+
+#footerId div div ul li .footerItem{
+    color: #222222;
+}
+
+.btnAddItem, .btnReduceItem, .btnDeleteItem{
+    border: none;
+}
+.btnAddItem{
+    background-color: #198754;
+}
+
+.btnReduceItem{
+    background-color: #ffc107;
+}
+
+.btnDeleteItem{
+    background-color: #dc3545;
+}
+
+
+
+/* Cart.html */
+#buttonDelete{
+    background-color: #dc3545;
+}
+
+#buttonAdd{
+    background-color: #198754;
+}
+
+#buttonDelete:hover{
+    background-color: #b92f2f;
+}
+
+#buttonAdd:hover{
+    background-color: #166c44;
+}
+
+#footerId{
+    background-color: #f5f5f5;
+}
+
+div .modalTrigger .modalProduct{
+    width: 25rem;
+    height: 25rem;
+}
+
+/* estilos de formulario */
+.container_form {
+    border: 4px solid #000000;
+    border-radius: 15px;
+    width: 500px;
+    padding: 20px;
+}
+
+.inputs {
+    position: relative;
+    left: 20px;
+    height: 40px;
+    width: 400px;
+}
+
+.comentario {
+    height: 60px;
+}
+
+/* button{
+    border: none;
+    font-size: 20px;
+    position: relative;
+    left: 125px;
+    border-radius: 20px;
+    width: 150px;
+    height: 45px;
+    background-color: #000;
+    color: white;
+} */
+
+/* button:hover {
+    transition: all 0.6s;
+    background-color: #fff;
+    color: #000;
+} */
