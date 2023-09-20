@@ -112,14 +112,7 @@ div .modalTrigger .modalProduct{
     height: 25rem;
 }
 
-@media screen and (max-width: 992px) {
-    .modalTrigger{
-        display: grid;
-        grid-template-rows: repeat(1fr, 100%);
-    }
-}
 
-/* Products */
 ul {
     list-style: none;
     padding-left: 0;
