@@ -112,6 +112,7 @@ div .modalTrigger .modalProduct{
     height: 25rem;
 }
 
+
 /* Sección de productos */
 ul {
     list-style: none;
@@ -181,3 +182,4 @@ li.bold {
     color: var(--green);
     font-weight: bold;
 }
+
