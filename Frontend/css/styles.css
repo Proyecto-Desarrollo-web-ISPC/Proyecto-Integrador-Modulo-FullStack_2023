@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+:root {
+    --green: #366608;
+    --white: #f5f5f5;
+    --black: #222222;
+    --primaryRed: #b92f2f;
+    --greenCart: #198754;
+    --redCart: #dc3545;
+    --yellowCart: #ffc107;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -102,39 +112,74 @@ div .modalTrigger .modalProduct{
     height: 25rem;
 }
 
-/* estilos de formulario */
-.container_form {
-    border: 4px solid #000000;
-    border-radius: 15px;
-    width: 500px;
-    padding: 20px;
+
+/* Sección de productos */
+ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-.inputs {
+li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+li.bold {
+    font-weight: bold;
+}
+
+/* Estilo para los modales */
+.modalProduct {
     position: relative;
-    left: 20px;
-    height: 40px;
-    width: 400px;
+    z-index: 2;
+    background-color: var(--green);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.comentario {
-    height: 60px;
+.modalProduct::before {
+    content: ""; /* Creo un pseudo elemento  */
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Coloca el fondo oscuro detrás de la imagen */
+    pointer-events: none; /* Permite que los elementos dentro del modal sean clicables */
 }
 
-/* button{
-    border: none;
-    font-size: 20px;
-    position: relative;
-    left: 125px;
-    border-radius: 20px;
-    width: 150px;
-    height: 45px;
-    background-color: #000;
-    color: white;
-} */
+/* Estilo para el título de los modales */
+.modalProduct__title {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Centra el título correctamente */
+    color: white; 
+    z-index: 3; /* Coloca el título por encima de todo el contenido */
+}
 
-/* button:hover {
-    transition: all 0.6s;
-    background-color: #fff;
-    color: #000;
-} */
+/* Estilos para botones de products */
+.addProductBtn, .secondaryBtn{
+    background-color: var(--green);
+    border-color: var(--green);
+}
+
+.secondaryBtn {
+    font-weight: bold;
+}
+
+.secondaryBtn:hover {
+    background-color: transparent;
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-weight: bold;
+}
+

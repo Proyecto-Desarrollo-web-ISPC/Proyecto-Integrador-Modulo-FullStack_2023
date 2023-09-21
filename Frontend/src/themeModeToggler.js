@@ -17,14 +17,15 @@ const basicStructure = {
     li: document.getElementsByTagName("li"),
     label: document.getElementsByTagName("label"),
     footerItem: document.getElementsByClassName("footerItem"),
-    html: document.getElementsByClassName('html')
+    html: document.getElementsByClassName('html'), 
+    modalBtnTitle: document.getElementsByClassName('modalProduct__title')
 }
 
 // Creación de objeto para funciones del modo Dark y Light
 const toggleMode = {
     lightMode: function(){
-        basicStructure.togglerBtnLM.setAttribute("class", "mx-2 navItem d-none");
-        basicStructure.togglerBtnDM.setAttribute("class", "mx-2 navItem d-block");
+        basicStructure.togglerBtnLM.setAttribute("class", "p-0 my-0 mx-1 navItem d-none");
+        basicStructure.togglerBtnDM.setAttribute("class", "p-0 my-0 mx-1 navItem d-block");
         const colorBodyLightMode = "linear-gradient(120deg, #f5f5f5 10%, #366608 80%)";
         basicStructure.body.style.background = colorBodyLightMode;
         basicStructure.footer.style.background = "#f5f5f5";
@@ -62,10 +63,13 @@ const toggleMode = {
         for(let i = 0; i < basicStructure.footerItem.length; i++){
             basicStructure.footerItem[i].style.color = "#222222";
         };
+        for(let i = 0; i < basicStructure.modalBtnTitle.length; i++){
+            basicStructure.modalBtnTitle[i].style.color = "#f5f5f5"
+        }
     },
     darkMode: function(){
-        basicStructure.togglerBtnDM.setAttribute("class", "mx-2 navItem d-none");
-        basicStructure.togglerBtnLM.setAttribute("class", "mx-2 navItem d-block");
+        basicStructure.togglerBtnDM.setAttribute("class", "p-0 my-0 mx-1 navItem d-none");
+        basicStructure.togglerBtnLM.setAttribute("class", "p-0 my-0 mx-1 navItem d-block");
         const colorBodyDarkMode = "linear-gradient(120deg, #222222 10%, #366608 80%)";
         basicStructure.body.style.background = colorBodyDarkMode;
         basicStructure.footer.style.background = "#222222";
@@ -105,6 +109,9 @@ const toggleMode = {
         }
         for(let i = 0; i < basicStructure.footerItem.length; i++){
             basicStructure.footerItem[i].style.color = "#f5f5f5";
+        }
+        for(let i = 0; i < basicStructure.modalBtnTitle.length; i++){
+            basicStructure.modalBtnTitle[i].style.color = "#f5f5f5"
         }
     }
 }
