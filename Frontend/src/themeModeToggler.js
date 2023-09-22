@@ -18,7 +18,8 @@ const basicStructure = {
     label: document.getElementsByTagName("label"),
     footerItem: document.getElementsByClassName("footerItem"),
     html: document.getElementsByClassName('html'), 
-    modalBtnTitle: document.getElementsByClassName('modalProduct__title')
+    modalBtnTitle: document.getElementsByClassName('modalProduct__title'),
+    btnToProducts: document.getElementById('btnToProducts')
 }
 
 // Creación de objeto para funciones del modo Dark y Light
@@ -66,6 +67,7 @@ const toggleMode = {
         for(let i = 0; i < basicStructure.modalBtnTitle.length; i++){
             basicStructure.modalBtnTitle[i].style.color = "#f5f5f5"
         }
+        basicStructure.btnToProducts.style.color = "#f5f5f5"
     },
     darkMode: function(){
         basicStructure.togglerBtnDM.setAttribute("class", "p-0 my-0 mx-1 navItem d-none");
@@ -113,6 +115,7 @@ const toggleMode = {
         for(let i = 0; i < basicStructure.modalBtnTitle.length; i++){
             basicStructure.modalBtnTitle[i].style.color = "#f5f5f5"
         }
+        basicStructure.btnToProducts.style.color = "#f5f5f5"
     }
 }
 
