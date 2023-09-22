@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="../src/popup.js"></script>
     <title>Tienda de campeones</title>
 </head>
 
@@ -17,8 +16,8 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline" id="navbarId">
             <div class="container-fluid">
                 <div class="d-flex flex-wrap">
-                    <a href="./index.html">
-                        <img class="mx-2" src="../img/logo-light.png" alt="logo" id="logo">
+                    <a href="./index.html" rel="prefetch">
+                        <img class="mx-2" src="../img/logo-light.png" alt="logo" id="logo" loading="lazy">
                     </a>
                     <p class="navbar-brand mainTitle d-flex flex-wrap align-items-center mx-2 my-3">
                         Tienda de campeones
@@ -32,10 +31,10 @@
                 <div class="collapse navbar-collapse navbarItemsContainer" id="navbarNav">
                     <ul class="navbar-nav mx-5 list-unstyled">
                         <li class="navItem nav-item my-0 mx-1 p-0">
-                            <a class="nav-link fw-medium" href="./products.html">Productos</a>
+                            <a class="nav-link fw-medium" href="./products.html" rel="prefetch">Productos</a>
                         </li>
                         <li class="navItem nav-item my-0 mx-1 p-0">
-                            <a class="nav-link fw-medium" href="./about.html">Nosotros</a>
+                            <a class="nav-link fw-medium" href="./about.html" rel="prefetch">Nosotros</a>
                         </li>
                     </ul>
                     <ul class="list-unstyled mx-2 my-0 d-flex flex-row">
@@ -51,7 +50,7 @@
                         </li>
                         <li class="p-0 my-0 mx-1 navItem nav-item">
                             <a href="./cart.html" class="material-symbols-sharp button text-decoration-none"
-                                id="cartBtn">
+                                id="cartBtn" rel="prefetch">
                                 shopping_cart
                             </a>
                         </li>
@@ -75,39 +74,40 @@
         <section>
             <div class="col-12">
                 <h1 class="text-center my-2 mx-3">La tienda de los auténticos campeones</h1>
-                <h2 class="text-center my-2 mx-3">Viste tu pasión con estilo único</h2>
-                <p class="my-2 mx-3">Compra aquí las camisetas retro de los campeones mundiales, desde 1930 hasta 2022, y demuestra que eres parte de la historia del fútbol.</p>
+                <p class="my-2 mx-3 fs-6">Comprá acá las camisetas retro de los campeones mundiales, desde 1930 hasta 2022, y demostrá que sos parte de la historia del fútbol.</p>
             </div>
         </section>
     
         <section class="d-flex flex-lg-row flex-md-column flex-sm-column flex-xs-column flex-wrap justify-content-center my-3 mx-3">
+            <h2 class="text-center my-3 mx-3 col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">Vestí tu pasión con un estilo único</h2>
             <!-- Imágenes reemplazan carrusel -->
             <div class="d-flex flex-column align-items-center col-12 col-xs-12 col-sm-12 col-md-12 col-lg-3 mx-3">
-                <img src="../img/products/Argentina/Argentina-1978-primera.svg" alt="..." class="img-fluid">
+                <img src="../img/products/Argentina/Argentina-1978-primera.svg" alt="camiseta" class="img-fluid" loading="lazy">
             </div>
             <div class="d-flex flex-column align-items-center col-12 col-xs-12 col-sm-12 col-md-12 col-lg-3 mx-3">
-                <img src="../img/products/Argentina/Argentina-1986-primera.svg" alt="..." class="img-fluid">
+                <img src="../img/products/Argentina/Argentina-1986-primera.svg" alt="camiseta" class="img-fluid" loading="lazy">
             </div>
             <div class="d-flex flex-column align-items-center col-12 col-xs-12 col-sm-12 col-md-12 col-lg-3 mx-3">
-                <img src="../img/products/Argentina/Argentina-2002-primera.svg" alt="..." class="img-fluid">
+                <img src="../img/products/Argentina/Argentina-2002-primera.svg" alt="camiseta" class="img-fluid" loading="lazy">
             </div>
         </section>
     
-        <section class="my-5 mx-2">
-            <a href="../pages/products.html" class="btn btn-dark px-4" role="button">Comprar</a>
+        <section class="my-5 mx-2 d-flex flex-column align-items-center">
+            <h3>Tenemos la mejor calidad de productos y variedades únicas en el mercado</h3>
+            <a href="../pages/products.html" class="btn btn-dark px-5 mt-2" role="button" rel="prefetch">Explorá nuestros productos</a>
         </section>
         
-        <section class="">
-            <h2 class="text-center my-2 mx-3">"Lleva la actitud de un campeón a donde vayas."</h2>
+        <section>
+            <h2 class="text-center my-2 mx-3">"Llevá la actitud de un campeón a donde vayas."</h2>
             <div class="d-flex flex-lg-row flex-md-column flex-sm-column flex-xs-column flex-wrap justify-content-center align-items-stretch">
                     <!-- Primera tarjeta vertical -->
                 <div class="d-flex flex-row justify-content-center align-items-stretch col-xs-12 col-sm-12 col-md-12 col-lg-4">
                     <div class="card mx-3 my-3" style="width: 18rem;">
-                        <img src="../img/products/gral/camisetas.jpg" class="card-img-top" alt="camisetas">
+                        <img src="../img/products/gral/camisetas.jpg" class="card-img-top" alt="camisetas" loading="lazy">
                         <div class="card-body d-flex flex-column justify-content-evenly">
-                            <h5 class="card-title">"Viste como un campeón, siéntete como un campeón."</h5>
-                            <p class="card-text">Encuentra las remeras retro de los campeones del Mundo en un solo lugar.</p>
-                            <a href="../pages/products.html" class="btn btn-outline-danger" role="button">
+                            <h5 class="card-title">"Vestite como un campeón, sentite como un campeón."</h5>
+                            <p class="card-text">Encontrá las remeras retro de los campeones del mundo en un solo lugar.</p>
+                            <a href="../pages/products.html" class="btn btn-outline-danger" role="button" rel="prefetch">
                                 Nuestros Productos
                             </a>
                         </div>
@@ -117,12 +117,12 @@
                 <!-- Segunda tarjeta vertical -->
                 <div class="d-flex flex-row justify-content-center align-items-stretch col-xs-12 col-sm-12 col-md-12 col-lg-4">
                     <div class="card mx-3 my-3" style="width: 18rem;">
-                        <img src="../img/logo-dark.png" class="card-img-top" alt="camisetas">
+                        <img src="../img/logo-dark.png" class="card-img-top" alt="logo" loading="lazy">
                         <div class="card-body d-flex flex-column justify-content-evenly">
                             <h5 class="card-title">"Calidad y estilo para verdaderos campeones."</h5>
-                            <p class="card-text">Descubre cómo nuestra pasión por el fútbol y la calidad en cada prenda nos convierte en verdaderos campeones del estilo retro.</p>
-                            <a href="../pages/about.html" class="btn btn-outline-info" role="button">
-                                Descubre nuestra pasión
+                            <p class="card-text">Descubrí cómo nuestra pasión por el fútbol y la calidad en cada prenda nos convierte en verdaderos campeones del estilo retro.</p>
+                            <a href="../pages/about.html" class="btn btn-outline-info" role="button" rel="prefetch">
+                                Descubrí nuestra pasión
                             </a>
                         </div>
                     </div>
@@ -131,12 +131,12 @@
                 <!-- Tercera tarjeta vertical -->
                 <div class="d-flex flex-row justify-content-center align-items-stretch col-xs-12 col-sm-12 col-md-12 col-lg-4">
                     <div class="card mx-3 my-3" style="width: 18rem;">
-                        <img src="../img/logo-dark.png" class="card-img-top" alt="camisetas">
+                        <img src="../img/copa-del-mundo.png" class="card-img-top" alt="trofeo" loading="lazy">
                         <div class="card-body d-flex flex-column justify-content-evenly">
-                            <h5 class="card-title">"Calidad y estilo para verdaderos campeones."</h5>
-                            <p class="card-text">Únete a nuestra comunidad.</p>
-                            <a href="../pages/about.html" class="btn btn-outline-info" role="button">
-                                Únete a nuestra comunidad.
+                            <h5 class="card-title">"Años de experiencia y colaboración nos avalan"</h5>
+                            <p class="card-text">Unite a nuestra comunidad y conocé los mejores beneficios.</p>
+                            <a href="../pages/about.html" class="btn btn-outline-success" role="button" rel="prefetch">
+                                Unite a nuestra comunidad
                             </a>
                         </div>
                     </div>
@@ -152,15 +152,15 @@
             </div>
             <div class="col">
                 <ul class="list-unstyled nav-underline my-5">
-                    <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="https://www.andreani.com/#!/personas" target="_blank">Seguí tu pedido</a></li>
-                    <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="https://instagram.com/" target="_blank">Instagram</a></li>
-                    <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="https://facebook.com/" target="_blank">Facebook</a></li>
+                    <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="https://www.andreani.com/#!/personas" target="_blank" rel="preconnect">Seguí tu pedido</a></li>
+                    <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="https://instagram.com/" target="_blank" rel="preconnect">Instagram</a></li>
+                    <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="https://facebook.com/" target="_blank" rel="preconnect">Facebook</a></li>
                 </ul>
             </div>
         </div>
     </footer>
 
-    <script type="module" src="../src/main.js"></script>
+    <script type="module" src="../src/main.js" async></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 
