@@ -9,6 +9,7 @@
     --greenCart: #198754;
     --redCart: #dc3545;
     --yellowCart: #ffc107;
+    --brown: #24160f;
 }
 
 *{
@@ -28,7 +29,7 @@
 
 #bodyId{
     /* #dfe9f3 */
-    background: linear-gradient(120deg, #f5f5f5 10%, #366608 80%);
+    background: linear-gradient(120deg, var(--white) 10%, var(--green) 80%);
     /* background-image: url("../img/background.jpg"); */
     background-repeat: no-repeat;
     background-size: contain;
@@ -73,38 +74,38 @@ p, a, small, label, span, .cartBtn, li, .form-select{
     border: none;
 }
 .btnAddItem{
-    background-color: #198754;
+    background-color: var(--greenCart);
 }
 
 .btnReduceItem{
-    background-color: #ffc107;
+    background-color: var(--yellowCart);
 }
 
 .btnDeleteItem{
-    background-color: #dc3545;
+    background-color: var(--redCart);
 }
 
 
 
 /* Cart.html */
 #buttonDelete{
-    background-color: #dc3545;
+    background-color: var(--redCart);
 }
 
 #buttonAdd{
-    background-color: #198754;
+    background-color: var(--greenCart);
 }
 
 #buttonDelete:hover{
-    background-color: #b92f2f;
+    background-color: var(--primaryRed);
 }
 
 #buttonAdd:hover{
-    background-color: #166c44;
+    background-color: var(--greenCart);
 }
 
 #footerId{
-    background-color: #f5f5f5;
+    background-color: var(--white);
 }
 
 div .modalTrigger .modalProduct{
@@ -136,17 +137,18 @@ li.bold {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    border: none;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 .modalProduct::before {
     content: ""; /* Creo un pseudo elemento  */
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
     left: 0;
@@ -156,18 +158,45 @@ li.bold {
     pointer-events: none; /* Permite que los elementos dentro del modal sean clicables */
 }
 
+.modalCountry {
+    position: relative;
+}
+
 /* Estilo para el título de los modales */
 .modalProduct__title {
     position: absolute;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 0;
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%); /* Centra el título correctamente */
-    color: white; 
+    color: var(--white); 
+    font-weight: bold;
     z-index: 3; /* Coloca el título por encima de todo el contenido */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.modalProduct__title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.modalProduct__title:hover::after {
+    transform: scaleX(1);
 }
 
 /* Estilos para botones de products */
-.addProductBtn, .secondaryBtn{
+.addProductBtn, .secondaryBtn {
     background-color: var(--green);
     border-color: var(--green);
 }
@@ -182,4 +211,3 @@ li.bold {
     color: var(--green);
     font-weight: bold;
 }
-
