@@ -66,48 +66,44 @@
                 </div>
             </nav>
         </header>
-        <main>
-            <div class="container mt-5">
-                <h1>Nosotros</h1>                      
-                <div class="row">
-                    <div class="col-6">
-                        <p> Bienvenidos a tienda de campeones, revive la historia del fútbol a través de nuestras camisetas,
-                            somos apasionados amantes del fútbol y de su historia como vos. Nuestro viaje en el tiempo nos lleva a rescatar las camisetas de los países que han conquistado la cima del deporte más grande del mundo.</p>
-
-                            <p>Cada camiseta es una ventana al pasado, representa el sudor y la dedicación de los jugadores que compartieron un sueño en común.
-                            Con un equipo compuesto por fanáticos del fútbol y expertos en moda deportiva, estamos comprometidos en revivir estas historias únicas.</p>
-
-                            <p>Únete a nosotros en esta travesía de celebración y nostalgia. Explora nuestra tienda en línea para descubrir auténticas camisetas de los campeones de la Copa Mundial. Cada compra es un tributo a la historia y un recordatorio constante del espíritu de lucha y victoria.</p>
-
-                            <p>Celebra la grandeza del fútbol. Celebra la historia. Celebra Tienda de Campeones.
-                        </p>
-                        <h3>Contacto</h3>
-                        <form action="#" class="container_form"> 
-                            <div class="mb-3">
-                                <label for="inputNombre" class="form-label">Nombre:</label>
-                                <input type="email" class="form-control" id="inputNombre" placeholder="Escribí tu nombre..." required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="inputApellido" class="form-label">Apellido:</label>
-                                <input type="email" class="form-control" id="inputApellido" placeholder="Escribí tu apellido..." required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="inputCorreo" class="form-label">Email: </label>
-                                <input type="email" class="form-control" id="inputCorreo" placeholder="example@example.com" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="inputComentario" class="form-label">Comentario:</label>
-                                <textarea class="form-control" id="inputComentario" rows="3"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-success">Enviar</button>
+        <main class="d-flex flex-row justify-content-evenly align-items-center flex-wrap">
+            <section class="mt-2 col-xs-12 col-sm-12 col-md-12 col-lg-5 mx-2">
+                <h1 class="fs-1 mx-5">Nosotros</h1>
+                <div>
+                    <div>
+                        <p class="mx-3">Bienvenidos a Tienda de Campeones: Reviví la historia del fútbol a través de nuestras camisetas.<br>
+                            &emsp;En Tienda de Campeones, somos apasionados amantes del fútbol y de su historia, nuestro viaje en el tiempo nos lleva a rescatar las camisetas de los países que han conquistado la cima del deporte más grande del mundo.<br>
+                            &emsp;Cada camiseta es una ventana al pasado: representa el sudor y la dedicación de los jugadores que compartieron un sueño común.
+                            Con un equipo compuesto por fanáticos del fútbol y expertos en moda deportiva, estamos comprometidos en revivir estas historias únicas.<br>
+                            &emsp;Unite a nosotros en esta travesía de celebración y nostalgia. Explorá nuestra tienda en línea para descubrir las auténticas camisetas de los campeones de la Copa Mundial. Cada compra es un tributo a la historia y un recordatorio constante del espíritu de lucha y victoria.
+                            Celebra la grandeza del fútbol. Celebra la historia. Bienvenidos a Tienda de Campeones.</p>
+                    </div>
+                    <div class="d-flex flex-column align-items-stretch border border-dark p-3 mx-3 rounded">
+                        <h3 class="fs-3 mx-5">Contacto</h3>
+                        <form action="#" method="GET" class="container_form d-flex flex-column align-items-stretch"> 
+                            <label for="inputNombre" class="form-label">Nombre:
+                                <input type="text" class="form-control" id="inputNombre" placeholder="Escribi tu nombre">
+                            </label>
+                            <label for="inputApellido" class="form-label">Apellido:
+                                <input type="text" class="form-control" id="inputApellido" placeholder="Escribi tu apellido">
+                            </label>
+                            <label for="inputEmail" class="form-label">Email: 
+                                <input type="email" class="form-control" id="inputEmail" placeholder="example@example.com">
+                            </label>
+                            <label for="inputMensaje" class="form-label">Dejanos un mensaje:</label>
+                            <textarea class="form-control" id="inputMensaje" rows="3" placeholder="Escribí tu mensaje acá..."></textarea>
+                            <button type="submit" class="btn btn-success mt-5 mx-3 float-end">Enviar</button>
                         </form>
                     </div>
-                    <div class="col-6"> 
-                        <h3>Nuestra ubicacion</h3>
-                        <iframe class="mx-3 my-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38522.17409975682!2d-64.21465373510006!3d-31.416569377483558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses-419!2sar!4v1694008804506!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                                         
-                    </div>
-                </div>                       
-            </div>
+                    
+                </div>
+            </section>
+            <section class="col-xs-12 col-sm-12 col-md-12 col-lg-5 mx-2 my-5">
+                <div class="p-2 m-2">
+                    <h3 class="fs-3 mx-5 my-3">Nuestra ubicación</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38522.17409975682!2d-64.21465373510006!3d-31.416569377483558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses-419!2sar!4v1694008804506!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
         </main>
         <footer class="mt-5 p-5" id="footerId">
             <div class="container-fluid row" >
