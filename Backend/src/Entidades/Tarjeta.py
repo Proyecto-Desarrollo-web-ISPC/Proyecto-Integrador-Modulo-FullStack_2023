@@ -7,6 +7,10 @@ class Tarjeta :
     def ID_tarjeta(self):
         return self._ID_tarjeta
     
+    @ID_tarjeta.setter
+    def ID_tarjeta (self,nuevo_id):
+        self._ID_tarjeta = nuevo_id
+    
     @property
     def nombre_tarjeta(self):
         return self._nombre_tarjeta

@@ -8,6 +8,10 @@ class Forma_de_pago:
     def ID_forma_de_pago(self):
         return self._ID_forma_de_pago
     
+    @ID_forma_de_pago.setter
+    def ID_forma_de_pago(self,nuevo_id):
+        self._ID_forma_de_pago = nuevo_id
+    
     @property
     def descripcion(self):
         return self._descripcion
