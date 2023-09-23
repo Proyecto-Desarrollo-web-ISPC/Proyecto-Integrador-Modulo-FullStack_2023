@@ -12,3 +12,4 @@ def validacion_caracter(args,campo):
 def validacion_numero(args,campo):
     if args <= 0:
         raise ValueError(f"El campo {campo} debe contener solo números")
+

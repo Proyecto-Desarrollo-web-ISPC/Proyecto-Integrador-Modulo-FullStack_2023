@@ -22,5 +22,6 @@ from Servicios.Producto_services import *
 #modificar_stock_talle()
 #cambiar_nombre_producto()
 #consultar_stock_producto()
-listar_productos()
+#listar_productos_talle()
 #eliminar_producto()
+#listar_todos_productos()

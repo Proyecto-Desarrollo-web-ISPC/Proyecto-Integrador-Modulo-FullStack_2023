@@ -62,7 +62,7 @@ def buscar_producto(nombre):
     try:
         connection.connect()
         
-        query = "SELECT ID_producto FROM Productos WHERE Nombre_producto = %s"
+        query = "SELECT ID_producto FROM Productos WHERE Nombre_producto LIKE %s "
         value = (nombre,)
         connection.cursor.execute(query, value)
         resultado = connection.cursor.fetchone()
@@ -110,11 +110,12 @@ def modify_nombre_producto(nombre_nuevo,id_producto):
             connection.close()
             
             
-def all_products():
+def all_products(nombre):
      try:
         connection.connect()
-        query = "SELECT  p.nombre_producto, p.precio, t.talle, pt.stock FROM productos p INNER JOIN productos_talles pt ON p.id_producto = pt.id_producto INNER JOIN talles t ON pt.id_talle = t.id_talle WHERE pt.stock > 0 order by ID_producto_talle ;"
-        connection.cursor.execute(query)
+        query = "SELECT p.nombre_producto, p.precio, t.talle, pt.stock FROM productos p INNER JOIN productos_talles pt ON p.id_producto = pt.id_producto INNER JOIN talles t ON pt.id_talle = t.id_talle WHERE pt.stock > 0 AND p.nombre_producto LIKE %s ORDER BY ID_producto_talle;"
+        value = (('%' + nombre + '%',))
+        connection.cursor.execute(query,value)
         resultado = connection.cursor.fetchall()
         if resultado:
             return resultado
@@ -176,5 +177,20 @@ def modify_precio(precio_nuevo,id_producto):
     except mysql.connector.Error as err:
         print("Error al modificar el nombre:", err)
     finally:
+         if connection:
+            connection.close()
+            
+            
+def listarProductos():
+     try:
+        connection.connect()
+        query = "SELECT Nombre_producto,precio FROM productos"
+        connection.cursor.execute(query)
+        resultados = connection.cursor.fetchall()
+        return resultados
+       
+     except mysql.connector.Error as err:
+        print("Error al Buscar el producto:", err)
+     finally:
          if connection:
             connection.close()

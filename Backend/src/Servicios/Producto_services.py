@@ -158,9 +158,10 @@ def consultar_stock_producto():
      print("Error:", error)
      
 
-def listar_productos():
+def listar_productos_talle():
  try:
-    productos =all_products()
+    nombre=input("ingrese el nombre del producto: ")
+    productos =all_products(nombre)
     if productos:
          encabezados = [ "Nombre producto", "Precio", "Talle","Stock disponible"]
          print(tabulate(productos, headers=encabezados, tablefmt="pretty"))
@@ -188,6 +189,20 @@ def eliminar_producto():
         stock= 0
         modify_stock(stock,producto_id,talleID)
         print(f"El producto {nombre} de Talle {talle}, ya no figura en la lista de nuestro productos a la venta")
+        
+    except ValueError as error:
+     print("Error:", error)
+     
+     
+     
+def listar_todos_productos():
+    try:
+        productos =listarProductos()
+        if productos:
+         encabezados = [ "Nombre producto", "Precio"]
+         print(tabulate(productos, headers=encabezados, tablefmt="pretty"))
+        else:
+         print("No se encontraron resultados.")
         
     except ValueError as error:
      print("Error:", error)

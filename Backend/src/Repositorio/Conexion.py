@@ -45,7 +45,7 @@ class DatabaseConnection:
 connection = DatabaseConnection(
 host='localhost',
 user='root', 
-password='root',
+password='*****',
 port='3306',
-database='toska'
+database='campeones_del_mundo'
 )
