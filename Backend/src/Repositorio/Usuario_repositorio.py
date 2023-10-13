@@ -1,12 +1,11 @@
 from Repositorio.Conexion import *
 
-def crear_user(nombre,apellido,email,dni,domicilio,rol):
+def crear_user(usuario):
      try:
         connection.connect()
         
         query = "INSERT INTO Usuarios(nombre,apellido,email,dni,domicilio,rol)VALUES (%s,%s,%s,%s,%s,%s)"
-        values = (nombre,apellido,email,dni,domicilio,rol)
-        connection.cursor.execute(query, values)
+        connection.cursor.execute(query,(usuario.nombre,usuario.apellido,usuario.email,usuario.dni, usuario.domicilio,usuario.get_rol().value))
         connection.commit()
         id_insertado = connection.cursor.lastrowid
         print("El Usuario se inserto correctamente en la base de datos.")
@@ -56,7 +55,25 @@ def buscar_por_email(mail):
    finally:
          if connection:
             connection.close()
-            
+
+def buscar_por_id(id):
+   try:
+        connection.connect()
+        
+        query = "SELECT * FROM Usuarios WHERE id_usuario = %s"
+        value = (id,)
+        connection.cursor.execute(query, value)
+        resultado = connection.cursor.fetchone()
+        if resultado:
+            return resultado
+        else:
+            return None
+   except mysql.connector.Error as err:
+        print("Error al buscar Usuario:", err)
+   finally:
+         if connection:
+            connection.close()
+
             
 def cambiar_mail(id_usuario,email_nuevo):
    try:
@@ -72,6 +89,27 @@ def cambiar_mail(id_usuario,email_nuevo):
          if connection:
             connection.close()  
             
+  
+def cambiar_domicilio(id_usuario,domicilio_nuevo):
+   try:
+      connection.connect()
+      query = "UPDATE usuarios SET domicilio = %s WHERE ID_usuario = %s"
+      value = (domicilio_nuevo,id_usuario)
+      connection.cursor.execute(query,value)
+      connection.commit()
+   
+   except mysql.connector.Error as err:
+        print("Error,no se pudo cambiar el domicilio,intente nuevamente:", err)
+   finally:
+         if connection:
+            connection.close()  
+  
+  
+  
+  
+  
+  
+  
   
   
   

@@ -3,7 +3,7 @@ class Pedido:
     def __init__(self):
         
         self._formas_de_pago = [] 
-        
+        self._detalles_list=[]
     @property
     def ID_pedido(self):
         return self._ID_pedido
@@ -19,8 +19,7 @@ class Pedido:
     @fecha.setter
     def fecha(self,fecha_nueva):
         self._fecha = fecha_nueva
-      
-    #de id_usuario solo establezco el getter y no el setter ya que es una clave foranea y no voy a necesitar setearlo 
+       
     @property
     def ID_usuario(self):
         return self._ID_usuario
@@ -37,7 +36,6 @@ class Pedido:
     def total(self,total_nuevo):
         self._total = total_nuevo
         
-  
         
     def get_estado(self):
         return self._estado
@@ -49,6 +47,12 @@ class Pedido:
         else:
             raise ValueError("El valor de estado debe ser un objeto de la clase Estado")
         
+    def get_detalles_list(self):
+        return self._detalles_list
+    
+    
+    def set_detalles_list(self,lista_nueva):
+        self._detalles_list = lista_nueva
     
     def __str__(self):
         return f"PEDIDO(ID:{self.ID_pedido}, Fecha: {self.fecha}, ID_usuario: {self.ID_usuario}, Total: {self.total}, Estado:{self.get_estado().value})"
