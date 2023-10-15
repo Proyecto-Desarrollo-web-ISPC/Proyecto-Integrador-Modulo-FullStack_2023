@@ -39,9 +39,11 @@
                     </ul>
                     <ul class="list-unstyled mx-2 my-0 d-flex flex-row">
                         <li id="loginBtn" class="p-0 my-0 mx-1 navItem nav-item d-block">
-                            <button class="material-symbols-sharp button">
-                                login
-                            </button>
+                            <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Acceder
+        </button>
+  
+
                         </li>
                         <li id="logoutBtn" class="p-0 my-0 mx-1 navItem nav-item d-none">
                             <button class="material-symbols-sharp button">
@@ -71,6 +73,36 @@
     </header>
 
     <main class="d-flex flex-column align-items-center">
+        <section><!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Dirección de e-mail</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">Ingrese una direccion válida.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+            
+                                <button type="submit" class="btn btn-primary">Ingresar</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Registrarme</button>
+                        </div>
+                    </div>
+                </div>
+            </div></section>
         <section>
             <div class="col-12">
                 <h1 class="text-center my-2 mx-3">La tienda de los auténticos campeones</h1>
