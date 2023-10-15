@@ -28,6 +28,14 @@ class Detalle_pedido :
     @ID_producto.setter
     def ID_producto(self,product_id):
         self._ID_producto= product_id
+        
+    @property
+    def ID_talle(self):
+        return self._ID_talle
+    
+    @ID_talle.setter
+    def ID_talle(self,talle_id):
+        self._ID_talle = talle_id   
     
     @property
     def cantidad(self):
