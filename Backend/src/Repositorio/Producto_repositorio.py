@@ -1,18 +1,17 @@
 from Repositorio.Conexion import *
 
-def crear_product(nombre,descripcion,precio):
+def crear_product(producto):
      try:
         connection.connect()
         
         query = "INSERT INTO Productos(nombre_producto,descripcion,precio)VALUES (%s,%s,%s)"
-        values = (nombre,descripcion,precio)
-        connection.cursor.execute(query, values)
+        connection.cursor.execute(query, (producto.nombre_producto,producto.descripcion,producto.precio))
         connection.commit()
         id_insertado = connection.cursor.lastrowid
         return id_insertado
         
      except mysql.connector.Error as err:
-        print("Error al cargar el producto:", err)
+        print("Error al crear el producto:", err)
      finally:
          if connection:
             connection.close()
@@ -40,13 +39,12 @@ def buscar_id_talle(talle):
             connection.close()
             
             
-def insert_producto_talle(id_producto,id_talle,stock):
+def insert_producto_talle(producto_talle):
     try:
         connection.connect()
         
         query = "INSERT INTO Productos_talles(ID_producto,ID_talle,Stock)VALUES (%s,%s,%s)"
-        values = (id_producto,id_talle,stock)
-        connection.cursor.execute(query, values)
+        connection.cursor.execute(query, (producto_talle.ID_producto,producto_talle.ID_talle,producto_talle.stock))
         connection.commit()
         id_insertado = connection.cursor.lastrowid
         return id_insertado
@@ -62,13 +60,12 @@ def buscar_producto(nombre):
     try:
         connection.connect()
         
-        query = "SELECT ID_producto FROM Productos WHERE Nombre_producto LIKE %s "
+        query = "SELECT * FROM Productos WHERE RTRIM(Nombre_producto) LIKE %s "
         value = (nombre,)
         connection.cursor.execute(query, value)
         resultado = connection.cursor.fetchone()
-        if resultado:
-            id_producto = resultado[0]
-            return id_producto
+        if resultado:  
+            return resultado
         else:
             return None
     except mysql.connector.Error as err:
@@ -79,13 +76,12 @@ def buscar_producto(nombre):
             
             
 #metodo a utilizar cuando haga un pedido       
-def modify_stock(stock_nuevo,id_producto,id_talle):
+def modify_stock(producto_talle):
     try:
         connection.connect()
         
         query = "UPDATE productos_talles SET stock = %s WHERE ID_producto = %s AND ID_talle = %s"
-        value = (stock_nuevo,id_producto,id_talle)
-        connection.cursor.execute(query, value)
+        connection.cursor.execute(query,(producto_talle.stock,producto_talle.ID_producto,producto_talle.ID_talle))
         connection.commit()
     except mysql.connector.Error as err:
         print("Error al modificar el stock:", err)
@@ -113,7 +109,16 @@ def modify_nombre_producto(nombre_nuevo,id_producto):
 def all_products(nombre):
      try:
         connection.connect()
-        query = "SELECT p.nombre_producto, p.precio, t.talle, pt.stock FROM productos p INNER JOIN productos_talles pt ON p.id_producto = pt.id_producto INNER JOIN talles t ON pt.id_talle = t.id_talle WHERE pt.stock > 0 AND p.nombre_producto LIKE %s ORDER BY ID_producto_talle;"
+        query = """SELECT
+        p.nombre_producto,
+        p.precio,
+        t.talle,
+        pt.stock
+        FROM productos p 
+        INNER JOIN productos_talles pt ON p.id_producto = pt.id_producto
+        INNER JOIN talles t ON pt.id_talle = t.id_talle 
+        WHERE pt.stock > 0 AND p.nombre_producto LIKE %s 
+        ORDER BY ID_producto_talle;"""
         value = (('%' + nombre + '%',))
         connection.cursor.execute(query,value)
         resultado = connection.cursor.fetchall()
@@ -153,12 +158,15 @@ def consultar_stock(id_producto,id_talle):
         connection.connect()
         
         query = "SELECT stock FROM productos_talles WHERE ID_producto = %s AND ID_talle = %s"
-        value = (id_producto,id_talle)
-        connection.cursor.execute(query, value)
+        values = (id_producto,id_talle)
+        connection.cursor.execute(query, values)
         resultado = connection.cursor.fetchone()
-        return resultado
+        if resultado:
+            return resultado[0]
+        else:
+            return None  
     except mysql.connector.Error as err:
-        print("Error al modificar el stock:", err)
+        print("Error al consultar el stock:", err)
     finally:
          if connection:
             connection.close()
@@ -175,7 +183,7 @@ def modify_precio(precio_nuevo,id_producto):
         connection.commit()
         print(f"El precio del producto fue modificado existosamente a ${precio_nuevo}")
     except mysql.connector.Error as err:
-        print("Error al modificar el nombre:", err)
+        print("Error al modificar el precio:", err)
     finally:
          if connection:
             connection.close()
@@ -184,7 +192,57 @@ def modify_precio(precio_nuevo,id_producto):
 def listarProductos():
      try:
         connection.connect()
-        query = "SELECT Nombre_producto,precio FROM productos"
+        query = """SELECT DISTINCT p.Nombre_producto, p.precio
+        FROM productos p
+        INNER JOIN productos_talles pt ON p.id_producto = pt.id_producto
+        WHERE pt.stock > 0"""
+        connection.cursor.execute(query)
+        resultados = connection.cursor.fetchall()
+        return resultados
+       
+     except mysql.connector.Error as err:
+        print("Error al Buscar el producto:", err)
+     finally:
+         if connection:
+            connection.close()
+            
+            
+            
+def listar_descripcion():
+    try:
+        connection.connect()
+        query = "SELECT Nombre_producto,descripcion FROM productos"
+        connection.cursor.execute(query)
+        resultados = connection.cursor.fetchall()
+        return resultados
+       
+    except mysql.connector.Error as err:
+        print("Error al listar el producto:", err)
+    finally:
+         if connection:
+            connection.close()
+            
+            
+def cambiar_descripcion(descripcion,id_producto):
+    try:
+        connection.connect()
+        
+        query = "UPDATE Productos SET descripcion = %s WHERE ID_producto = %s"
+        value = (descripcion,id_producto)
+        connection.cursor.execute(query, value)
+        connection.commit()
+        print(f"La descripcion del producto fue modificado existosamente")
+    except mysql.connector.Error as err:
+        print("Error al modificar la descripcion:", err)
+    finally:
+         if connection:
+            connection.close()
+            
+            
+def listar_talles():
+     try:
+        connection.connect()
+        query = "SELECT talle FROM talles"
         connection.cursor.execute(query)
         resultados = connection.cursor.fetchall()
         return resultados
