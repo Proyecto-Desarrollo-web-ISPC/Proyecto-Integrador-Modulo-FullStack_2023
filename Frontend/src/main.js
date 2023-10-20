@@ -1,16 +1,10 @@
-import {basicStructure, toggleMode} from './themeModeToggler.js' 
+import {basicStructure, toggleTheme} from './themeModeToggler.js' 
 
 // Ejecución de modos de tema
-setDarkMode();
-function setDarkMode(){
-    basicStructure.togglerBtnDM.addEventListener("click", () => {
-        toggleMode.darkMode();
-    });
-}
+basicStructure.togglerBtnDM.addEventListener("click", () => {
+    toggleTheme('dark');
+});
 
-setLightMode();
-function setLightMode(){
-    basicStructure.togglerBtnLM.addEventListener("click", () => {
-        toggleMode.lightMode();
-    })
-}
+basicStructure.togglerBtnLM.addEventListener("click", () => {
+    toggleTheme('light');
+})
