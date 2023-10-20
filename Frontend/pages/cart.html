@@ -38,9 +38,9 @@
                         </ul>
                         <ul class="list-unstyled mx-2 my-0 d-flex flex-row">
                             <li id="loginBtn" class="p-0 my-0 mx-1 navItem nav-item d-block">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">Acceder
-                            </button>
+                                <button class="material-symbols-sharp button">
+                                    login
+                                </button>
                             </li>
                             <li id="logoutBtn" class="p-0 my-0 mx-1 navItem nav-item d-none">
                                 <button class="material-symbols-sharp button">
@@ -65,95 +65,6 @@
 
         <!-- Contenido principal -->
         <main>
-            <section><!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Dirección de e-mail</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1"
-                                            aria-describedby="emailHelp">
-                                        <div id="emailHelp" class="form-text">Ingrese una direccion válida.</div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1">
-                                    </div>
-    
-                                    <button type="submit" class="btn btn-primary">Ingresar</button>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#registerModal">Registrarme</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal to register -->
-                <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content" id="registerForm">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="registerModalLabel">Registrarse</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="inputRegisterNombre" class="form-label">Nombre</label>
-                                        <input type="text" name="nombre" class="form-control" id="inputRegisterNombre"
-                                            aria-describedby="nameHelp" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="inputRegisterApellido" class="form-label">Apellido</label>
-                                        <input type="text" name="apellido" class="form-control" id="inputRegisterApellido"
-                                            aria-describedby="apellidoHelp" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="inputRegisterDNI" class="form-label">DNI</label>
-                                        <input type="text" name="dni" class="form-control" id="inputRegisterDNI"
-                                            aria-describedby="dniHelp" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="inputRegisterDomicilio" class="form-label">Domicilio</label>
-                                        <input type="text" name="domicilio" class="form-control" id="inputRegisterDomicilio"
-                                            aria-describedby="domicilioHelp" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="inputRegisterEmail" class="form-label">Correo electrónico</label>
-                                        <input type="email" name="registerEmail" class="form-control"
-                                            id="inputRegisterEmail" aria-describedby="emailHelp">
-                                        <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con
-                                            entidades externas.</div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="inputRegisterPassword" class="form-label">Contraseña</label>
-                                        <input type="password" name="registerPassword" class="form-control"
-                                            id="inputRegisterPassword" aria-describedby="passwordHelp" minlength="8"
-                                            required>
-                                    </div>
-                                    <div id="passwordHelp" class="form-text">Tu contraseña debe tener al menos 8 caracteres
-                                        y debe incluir números, letras mayúsculas/minúsculas y símbolos.</div>
-                                    <button type="submit" class="btn btn-primary" id="registerBtn">Registrarse</button>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <h1 class="mx-5 mb-3 mainTitle">
                 Tus camisetas:
             </h1>
