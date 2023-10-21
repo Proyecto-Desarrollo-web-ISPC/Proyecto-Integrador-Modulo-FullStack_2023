@@ -107,9 +107,67 @@
                     </div>
                 </div>
             </div>
-            </section>
-            
-            <section>
+        </section>
+
+        <section>
+            <!-- Modal to register -->
+            <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="registerForm">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="registerModalLabel">Registrarse</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="inputRegisterNombre" class="form-label">Nombre</label>
+                                    <input type="text" name="nombre" class="form-control" id="inputRegisterNombre"
+                                        aria-describedby="nameHelp" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterApellido" class="form-label">Apellido</label>
+                                    <input type="text" name="apellido" class="form-control" id="inputRegisterApellido"
+                                        aria-describedby="apellidoHelp" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterDNI" class="form-label">DNI</label>
+                                    <input type="text" name="dni" class="form-control" id="inputRegisterDNI"
+                                        aria-describedby="dniHelp" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterDomicilio" class="form-label">Domicilio</label>
+                                    <input type="text" name="domicilio" class="form-control" id="inputRegisterDomicilio"
+                                        aria-describedby="domicilioHelp" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterEmail" class="form-label">Correo electrónico</label>
+                                    <input type="email" name="registerEmail" class="form-control"
+                                        id="inputRegisterEmail" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con
+                                        entidades externas.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterPassword" class="form-label">Contraseña</label>
+                                    <input type="password" name="registerPassword" class="form-control"
+                                        id="inputRegisterPassword" aria-describedby="passwordHelp" minlength="8"
+                                        required>
+                                </div>
+                                <div id="passwordHelp" class="form-text">Tu contraseña debe tener al menos 8 caracteres
+                                    y debe incluir números, letras mayúsculas/minúsculas y símbolos.</div>
+                                <button type="submit" class="btn btn-primary" id="registerBtn">Registrarse</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
             <div class="col-12">
                 <h1 class="text-center my-2 mx-3">La tienda de los auténticos campeones</h1>
                 <p class="my-2 mx-3 fs-6">Comprá acá las camisetas retro de los campeones mundiales, desde 1930 hasta
