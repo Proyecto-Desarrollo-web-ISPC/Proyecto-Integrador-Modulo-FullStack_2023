@@ -1,123 +1,244 @@
 <!doctype html>
 <html lang="es" data-bs-theme="light" class="html">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="../img/logo-light.png" type="image/x-icon">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-        <link rel="stylesheet" href="../css/styles.css">
-        <title>Tienda de campeones</title>
-    </head>
 
-    <body id="bodyId">
-        <header class="container-fluid headerClass mx-0 px-0 mb-5">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline" id="navbarId">
-                <div class="container-fluid">
-                    <div class="d-flex flex-wrap">
-                        <a href="./index.html" rel="prefetch">
-                            <img class="mx-2" src="../img/logo-light.png" alt="logo" id="logo" loading="lazy">
-                        </a>
-                        <p class="navbar-brand mainTitle d-flex flex-wrap align-items-center mx-2 my-3">
-                            Tienda de campeones
-                        </p>
-                    </div>
-                    <button class="navbar-toggler my-2 mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse navbarItemsContainer" id="navbarNav">
-                        <ul class="navbar-nav mx-5 list-unstyled">
-                            <li class="navItem nav-item my-0 mx-1 p-0">
-                                <a class="nav-link fw-medium" aria-current="page" href="./index.html" rel="prefetch">Inicio</a>
-                            </li>
-                            <li class="navItem nav-item my-0 mx-1 p-0">
-                                <a class="nav-link fw-medium" href="./products.html" rel="prefetch">Productos</a>
-                            </li>
-                        </ul>
-                        <ul class="list-unstyled mx-2 my-0 d-flex flex-row">
-                            <li id="loginBtn" class="p-0 my-0 mx-1 navItem nav-item d-block">
-                                <button class="material-symbols-sharp button">
-                                    login
-                                </button>
-                            </li>
-                            <li id="logoutBtn" class="p-0 my-0 mx-1 navItem nav-item d-none">
-                                <button class="material-symbols-sharp button">
-                                    logout
-                                </button>
-                            </li>
-                            <li class="p-0 my-0 mx-1 navItem nav-item">
-                                <a href="./cart.html" class="material-symbols-sharp button text-decoration-none" id="cartBtn" rel="prefetch">
-                                    shopping_cart
-                                </a>
-                            </li>
-                            <li id="togglerBtnDM" class="p-0 my-0 mx-1 navItem nav-item d-block">
-                                <button class="material-symbols-sharp button">
-                                    dark_mode
-                                </button>
-                            </li>
-                            <li id="togglerBtnLM" class="p-0 my-0 mx-1 navItem nav-item d-none">
-                                <button class="material-symbols-sharp button ">
-                                    light_mode
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logo-light.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Tienda de campeones</title>
+</head>
+
+<body id="bodyId">
+    <header class="container-fluid headerClass mx-0 px-0 mb-5">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline" id="navbarId">
+            <div class="container-fluid">
+                <div class="d-flex flex-wrap">
+                    <a href="./index.html" rel="prefetch">
+                        <img class="mx-2" src="../img/logo-light.png" alt="logo" id="logo" loading="lazy">
+                    </a>
+                    <p class="navbar-brand mainTitle d-flex flex-wrap align-items-center mx-2 my-3">
+                        Tienda de campeones
+                    </p>
                 </div>
-            </nav>
-        </header>
-        <main class="container-fluid">
-            <section class="mt-2 mx-0 d-flex flex-row justify-content-evenly flex-wrap">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 mx-0 px-0">
-                    <div class="mb-5 px-3">
-                        <h1 class="fs-2 px-3 mx-0">Acerca de nosotros</h1>
-                        <p class="fs-6">Bienvenidos a Tienda de Campeones: Reviví la historia del fútbol a través de nuestras camisetas.<br>
-                        &emsp;En Tienda de Campeones, somos apasionados amantes del fútbol y de su historia, nuestro viaje en el tiempo nos lleva a rescatar las camisetas de los países que han conquistado la cima del deporte más grande del mundo.<br>
-                        &emsp;Cada camiseta es una ventana al pasado: representa el sudor y la dedicación de los jugadores que compartieron un sueño común.
-                        Con un equipo compuesto por fanáticos del fútbol y expertos en moda deportiva, estamos comprometidos en revivir estas historias únicas.<br>
-                        &emsp;Unite a nosotros en esta travesía de celebración y nostalgia. Explorá nuestra tienda en línea para descubrir las auténticas camisetas de los campeones de la Copa Mundial. Cada compra es un tributo a la historia y un recordatorio constante del espíritu de lucha y victoria.<br>
-                        Celebrá la grandeza del fútbol. Celebrá la historia. Bienvenidos a Tienda de Campeones.</p>
-                    </div>
-                    <hr>
-                    <div class="container-fluid p-2 mx-0 rounded">
-                        <form action="#" method="GET" class="container_form d-flex flex-column align-items-stretch mx-3 p-0"> 
-                            <h3 class="fs-3 text-center">Contacto</h3>
-                            <label for="inputNombre" class="form-label">Nombre:
-                                <input type="text" class="form-control" id="inputNombre" placeholder="Escribí tu nombre...">
-                            </label>
-                            <label for="inputApellido" class="form-label">Apellido:
-                                <input type="text" class="form-control" id="inputApellido" placeholder="Escribí tu apellido...">
-                            </label>
-                            <label for="inputEmail" class="form-label">Email: 
-                                <input type="email" class="form-control" id="inputEmail" placeholder="example@example.com">
-                            </label>
-                            <label for="inputMensaje" class="form-label">Dejanos un mensaje:</label>
-                            <textarea class="form-control" id="inputMensaje" rows="3" placeholder="Escribí tu mensaje acá..."></textarea>
-                            <button type="submit" class="btn btn-success my-3 mx-3 float-end">Enviar</button>
-                        </form>
-                    </div>
-                </div>
-                <iframe class="col-xs-12 col-sm-12 col-md-12 col-lg-4 px-0 mx-0 my-5 rounded align-self-start" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217955.00184323578!2d-64.35902541600714!3d-31.399054706621524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1691437554022!5m2!1ses!2sar" width="420" height="700" style="border:0;" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 px-5 mx-0 my-5 rounded d-flex flex-column align-items-center">
-                    <h2 class="text-center mb-3">Nuestra ubicación</h2>
-                </div> -->
-            </section>
-        </main>
-        <footer class="mt-5 p-5" id="footerId">
-            <div class="container-fluid row" >
-                <div class="col d-flex align-items-center footerItem fs-5">
-                    ©Tienda de campeones - Todos los derechos reservados
-                </div>
-                <div class="col">
-                    <ul class="list-unstyled nav-underline my-5">
-                        <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="https://www.andreani.com/#!/personas" target="_blank" rel="preconnect">Seguí tu pedido</a></li>
-                        <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="https://instagram.com/" target="_blank" rel="preconnect">Instagram</a></li>
-                        <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="https://facebook.com/" target="_blank" rel="preconnect">Facebook</a></li>
+                <button class="navbar-toggler my-2 mx-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navbarItemsContainer" id="navbarNav">
+                    <ul class="navbar-nav mx-5 list-unstyled">
+                        <li class="navItem nav-item my-0 mx-1 p-0">
+                            <a class="nav-link fw-medium" aria-current="page" href="./index.html"
+                                rel="prefetch">Inicio</a>
+                        </li>
+                        <li class="navItem nav-item my-0 mx-1 p-0">
+                            <a class="nav-link fw-medium" href="./products.html" rel="prefetch">Productos</a>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled mx-2 my-0 d-flex flex-row">
+                        <li id="loginBtn" class="p-0 my-0 mx-1 navItem nav-item d-block">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Acceder
+                            </button>
+                        </li>
+                        <li id="logoutBtn" class="p-0 my-0 mx-1 navItem nav-item d-none">
+                            <button class="material-symbols-sharp button">
+                                logout
+                            </button>
+                        </li>
+                        <li class="p-0 my-0 mx-1 navItem nav-item">
+                            <a href="./cart.html" class="material-symbols-sharp button text-decoration-none"
+                                id="cartBtn" rel="prefetch">
+                                shopping_cart
+                            </a>
+                        </li>
+                        <li id="togglerBtnDM" class="p-0 my-0 mx-1 navItem nav-item d-block">
+                            <button class="material-symbols-sharp button">
+                                dark_mode
+                            </button>
+                        </li>
+                        <li id="togglerBtnLM" class="p-0 my-0 mx-1 navItem nav-item d-none">
+                            <button class="material-symbols-sharp button ">
+                                light_mode
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
-        </footer>              
-        <script type="module" src="../src/main.js" async></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    </body>
+        </nav>
+    </header>
+    <main class="container-fluid">
+        <section><!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Dirección de e-mail</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">Ingrese una direccion válida.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Ingresar</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">Registrarme</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <!-- Modal to register -->
+            <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="registerForm">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="registerModalLabel">Registrarse</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="inputRegisterNombre" class="form-label">Nombre</label>
+                                    <input type="text" name="nombre" class="form-control" id="inputRegisterNombre"
+                                        aria-describedby="nameHelp" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterApellido" class="form-label">Apellido</label>
+                                    <input type="text" name="apellido" class="form-control" id="inputRegisterApellido"
+                                        aria-describedby="apellidoHelp" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterDNI" class="form-label">DNI</label>
+                                    <input type="text" name="dni" class="form-control" id="inputRegisterDNI"
+                                        aria-describedby="dniHelp" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterDomicilio" class="form-label">Domicilio</label>
+                                    <input type="text" name="domicilio" class="form-control" id="inputRegisterDomicilio"
+                                        aria-describedby="domicilioHelp" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterEmail" class="form-label">Correo electrónico</label>
+                                    <input type="email" name="registerEmail" class="form-control"
+                                        id="inputRegisterEmail" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con
+                                        entidades externas.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterPassword" class="form-label">Contraseña</label>
+                                    <input type="password" name="registerPassword" class="form-control"
+                                        id="inputRegisterPassword" aria-describedby="passwordHelp" minlength="8"
+                                        required>
+                                </div>
+                                <div id="passwordHelp" class="form-text">Tu contraseña debe tener al menos 8 caracteres
+                                    y debe incluir números, letras mayúsculas/minúsculas y símbolos.</div>
+                                <button type="submit" class="btn btn-primary" id="registerBtn">Registrarse</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-2 mx-0 d-flex flex-row justify-content-evenly flex-wrap">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 mx-0 px-0">
+                <div class="mb-5 px-3">
+                    <h1 class="fs-2 px-3 mx-0">Acerca de nosotros</h1>
+                    <p class="fs-6">Bienvenidos a Tienda de Campeones: Reviví la historia del fútbol a través de
+                        nuestras camisetas.<br>
+                        &emsp;En Tienda de Campeones, somos apasionados amantes del fútbol y de su historia, nuestro
+                        viaje en el tiempo nos lleva a rescatar las camisetas de los países que han conquistado la cima
+                        del deporte más grande del mundo.<br>
+                        &emsp;Cada camiseta es una ventana al pasado: representa el sudor y la dedicación de los
+                        jugadores que compartieron un sueño común.
+                        Con un equipo compuesto por fanáticos del fútbol y expertos en moda deportiva, estamos
+                        comprometidos en revivir estas historias únicas.<br>
+                        &emsp;Unite a nosotros en esta travesía de celebración y nostalgia. Explorá nuestra tienda en
+                        línea para descubrir las auténticas camisetas de los campeones de la Copa Mundial. Cada compra
+                        es un tributo a la historia y un recordatorio constante del espíritu de lucha y victoria.<br>
+                        Celebrá la grandeza del fútbol. Celebrá la historia. Bienvenidos a Tienda de Campeones.</p>
+                </div>
+                <hr>
+                <div class="container-fluid p-2 mx-0 rounded">
+                    <form action="#" method="GET"
+                        class="container_form d-flex flex-column align-items-stretch mx-3 p-0">
+                        <h3 class="fs-3 text-center">Contacto</h3>
+                        <label for="inputNombre" class="form-label">Nombre:
+                            <input type="text" class="form-control" id="inputNombre" placeholder="Escribí tu nombre...">
+                        </label>
+                        <label for="inputApellido" class="form-label">Apellido:
+                            <input type="text" class="form-control" id="inputApellido"
+                                placeholder="Escribí tu apellido...">
+                        </label>
+                        <label for="inputEmail" class="form-label">Email:
+                            <input type="email" class="form-control" id="inputEmail" placeholder="example@example.com">
+                        </label>
+                        <label for="inputMensaje" class="form-label">Dejanos un mensaje:</label>
+                        <textarea class="form-control" id="inputMensaje" rows="3"
+                            placeholder="Escribí tu mensaje acá..."></textarea>
+                        <button type="submit" class="btn btn-success my-3 mx-3 float-end">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <iframe class="col-xs-12 col-sm-12 col-md-12 col-lg-4 px-0 mx-0 my-5 rounded align-self-start"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217955.00184323578!2d-64.35902541600714!3d-31.399054706621524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1691437554022!5m2!1ses!2sar"
+                width="420" height="700" style="border:0;" allowfullscreen="false" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 px-5 mx-0 my-5 rounded d-flex flex-column align-items-center">
+                    <h2 class="text-center mb-3">Nuestra ubicación</h2>
+                </div> -->
+        </section>
+    </main>
+    <footer class="mt-5 p-5" id="footerId">
+        <div class="container-fluid row">
+            <div class="col d-flex align-items-center footerItem fs-5">
+                ©Tienda de campeones - Todos los derechos reservados
+            </div>
+            <div class="col">
+                <ul class="list-unstyled nav-underline my-5">
+                    <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3"
+                            href="https://www.andreani.com/#!/personas" target="_blank" rel="preconnect">Seguí tu
+                            pedido</a></li>
+                    <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3"
+                            href="https://instagram.com/" target="_blank" rel="preconnect">Instagram</a></li>
+                    <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3"
+                            href="https://facebook.com/" target="_blank" rel="preconnect">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="../src/main.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
