@@ -1,6 +1,5 @@
 import { basicStructure, toggleTheme } from './themeModeToggler.js' 
 import { validateFields } from './validadores/validator.js';
-import { validateForms } from './validadores/register.js';
 import { initSystem } from './GestorDeUsuarios/getUserInfo.js'
 import { checkLoginStatus } from './GestorDeUsuarios/handleLoginLogOutinterface.js';
 import { isUserLoggedIn } from './GestorDeUsuarios/getUserInfo.js';
@@ -13,7 +12,6 @@ if(path.includes('about.html')){
     document.addEventListener("DOMContentLoaded", validateFields());
 };
 
-document.addEventListener("DOMContentLoaded", validateForms());
 
 // Ejecución de modos de tema
 basicStructure.togglerBtnDM.addEventListener("click", () => {
