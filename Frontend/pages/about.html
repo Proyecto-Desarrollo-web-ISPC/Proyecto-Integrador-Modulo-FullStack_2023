@@ -43,8 +43,8 @@
                     <ul class="list-unstyled mx-2 my-0 d-flex flex-row">
                         <li id="loginBtn" class="p-0 my-0 mx-1 navItem nav-item d-block">
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">Acceder
+                            <button type="button" class="material-symbols-sharp button text-decoration-none" id="loginBtn" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"">Login
                             </button>
                         </li>
                         <li id="logoutBtn" class="p-0 my-0 mx-1 navItem nav-item d-none">
@@ -121,7 +121,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form id="regForm">
                                 <div class="mb-3">
                                     <label for="inputRegisterNombre" class="form-label">Nombre</label>
                                     <input type="text" name="nombre" class="form-control" id="inputRegisterNombre"
@@ -154,10 +154,18 @@
                                     <input type="password" name="registerPassword" class="form-control"
                                         id="inputRegisterPassword" aria-describedby="passwordHelp" minlength="8"
                                         required>
+                                        <div id="passwordHelp" class="form-text">Tu contraseña debe tener al menos 8 caracteres
+                                            y debe incluir números, letras mayúsculas/minúsculas y símbolos.</div>
                                 </div>
-                                <div id="passwordHelp" class="form-text">Tu contraseña debe tener al menos 8 caracteres
-                                    y debe incluir números, letras mayúsculas/minúsculas y símbolos.</div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterConfirmPassword" class="form-label">Confirmar Contraseña</label>
+                                    <input type="password" name="registerConfirmPassword" class="form-control" id="inputRegisterConfirmPassword" aria-describedby="confirmPasswordHelp" minlength="8" required>
+                                </div>
+
                                 <button type="submit" class="btn btn-primary" id="registerBtn">Registrarse</button>
+                                <div id="successMessage" style="display: none;" class="alert alert-success mt-3">
+                                    Usuario registrado con éxito.
+                                </div>
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -188,23 +196,32 @@
                 </div>
                 <hr>
                 <div class="container-fluid p-2 mx-0 rounded">
-                    <form action="#" method="GET"
-                        class="container_form d-flex flex-column align-items-stretch mx-3 p-0">
+                    <form action="#" method="GET" class="was-validated" id="contactForm" novalidate>
                         <h3 class="fs-3 text-center">Contacto</h3>
-                        <label for="inputNombre" class="form-label">Nombre:
-                            <input type="text" class="form-control" id="inputNombre" placeholder="Escribí tu nombre...">
-                        </label>
-                        <label for="inputApellido" class="form-label">Apellido:
-                            <input type="text" class="form-control" id="inputApellido"
-                                placeholder="Escribí tu apellido...">
-                        </label>
-                        <label for="inputEmail" class="form-label">Email:
-                            <input type="email" class="form-control" id="inputEmail" placeholder="example@example.com">
-                        </label>
-                        <label for="inputMensaje" class="form-label">Dejanos un mensaje:</label>
-                        <textarea class="form-control" id="inputMensaje" rows="3"
-                            placeholder="Escribí tu mensaje acá..."></textarea>
-                        <button type="submit" class="btn btn-success my-3 mx-3 float-end">Enviar</button>
+                        <div class="mb-3">
+                            <label for="inputNombre" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="inputNombre" placeholder="Escribí tu nombre..." required>
+                            <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputApellido" class="form-label">Apellido:</label>
+                            <input type="text" class="form-control" id="inputApellido" placeholder="Escribí tu apellido..." required>
+                            <div class="invalid-feedback">Por favor, ingresa tu apellido.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label">Email:</label>
+                            <input type="email" class="form-control"  id="inputEmail" placeholder="example@example.com" required>
+                            <div class="invalid-feedback">Por favor, ingresa un correo electrónico válido.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputMensaje" class="form-label">Dejanos un mensaje:</label>
+                            <textarea class="form-control" id="inputMensaje" rows="3" placeholder="Escribí tu mensaje acá..." required></textarea>
+                            <div class="invalid-feedback">Por favor, ingresa un mensaje.</div>
+                        </div>
+                        <button type="submit" class="btn btn-success my-3 mx-3 float-end" id="buttonContacto">Enviar</button>
+                        <div class="alert alert-success mt-3" id="confirmationMessage" style="display: none;">
+                            ¡Formulario enviado con éxito! Gracias por tu mensaje. Te responderemos a la brevedad.
+                        </div>
                     </form>
                 </div>
             </div>
@@ -217,21 +234,21 @@
                 </div> -->
         </section>
     </main>
-    <footer class="mt-5 p-5" id="footerId">
-        <div class="container-fluid row">
-            <div class="col d-flex align-items-center footerItem fs-5">
-                ©Tienda de campeones - Todos los derechos reservados
-            </div>
-            <div class="col">
-                <ul class="list-unstyled nav-underline my-5">
-                    <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3"
-                            href="https://www.andreani.com/#!/personas" target="_blank" rel="preconnect">Seguí tu
-                            pedido</a></li>
-                    <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3"
-                            href="https://instagram.com/" target="_blank" rel="preconnect">Instagram</a></li>
-                    <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3"
-                            href="https://facebook.com/" target="_blank" rel="preconnect">Facebook</a></li>
-                </ul>
+    <footer class="mt-5 p-4" id="footerId">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="footerItem fs-7 text-center">
+                        ©Tienda de campeones - Todos los derechos reservados
+                    </p>
+                </div>
+                <div class="col">
+                    <ul class="list-unstyled nav-underline d-flex flex-wrap justify-content-center align-items-center">
+                        <li><a class="nav-item footerItem nav-link link-offset-3" href="https://www.andreani.com/#!/personas" target="_blank" rel="preconnect">Seguí tu pedido</a></li>
+                        <li><a class="nav-item footerItem nav-link link-offset-3" href="https://instagram.com/" target="_blank" rel="preconnect">Instagram</a></li>
+                        <li><a class="nav-item footerItem nav-link link-offset-3" href="https://facebook.com/" target="_blank" rel="preconnect">Facebook</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
