@@ -1,7 +1,7 @@
 export function checkLoginStatus(isUserLoggedIn) {
     const logBtnsContainer = document.getElementById('log');
     const loginBtn = logBtnsContainer.querySelector('#loginBtn');
-    const logoutBtn = logBtnsContainer.querySelector('#logoutBtn');
+    const logoutBtn = document.getElementById('logoutBtn');
 
     isUserLoggedIn.connectSession = JSON.parse(localStorage.getItem('isUserLoggedIn'));
 
@@ -23,6 +23,6 @@ export function logOutUser(isUserLoggedIn){ //* Getting isUserLoggedIn object
         alert('¡Hasta la próxima!')
         setTimeout(() => {
             window.location.reload();
-        }, 3000);
+        }, 1000);
     };
 };
