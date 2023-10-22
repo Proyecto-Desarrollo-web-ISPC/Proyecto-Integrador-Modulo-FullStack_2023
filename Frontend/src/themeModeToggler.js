@@ -1,5 +1,5 @@
 // Creación de selector de elementos de navegación y HTML de la estructura 
-const basicStructure = {
+export const basicStructure = {
     togglerBtnLM: document.getElementById("togglerBtnLM"),
     togglerBtnDM: document.getElementById("togglerBtnDM"),
     loginBtn: document.getElementById("loginBtn"),
@@ -117,5 +117,13 @@ const toggleMode = {
     }
 }
 
-// Exportación de objetos
-export {toggleMode, basicStructure} 
+export function toggleTheme(theme){
+    if(theme === 'dark'){
+        toggleMode.darkMode();
+    } else if(theme === 'light'){
+        toggleMode.lightMode();
+    };
+    localStorage.setItem('theme', theme);
+};
+const userTheme = localStorage.getItem('theme');
+toggleTheme(userTheme || 'light');

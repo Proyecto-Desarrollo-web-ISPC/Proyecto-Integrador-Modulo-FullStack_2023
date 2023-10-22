@@ -1,672 +1,1005 @@
 <!doctype html>
 <html lang="es" data-bs-theme="light" class="html">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="../img/logo-light.png" type="image/x-icon">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <link rel="stylesheet" href="../css/styles.css">
-        <title>Tienda de campeones</title>
-    </head>
-    <body id="bodyId">
-        <header class="container-fluid headerClass mx-0 px-0 mb-5">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline" id="navbarId">
-                <div class="container-fluid">
-                    <div class="d-flex flex-wrap">
-                        <a href="./index.html" rel="prefetch">
-                            <img class="mx-2" src="../img/logo-light.png" alt="logo" id="logo" loading="lazy">
-                        </a>
-                        <p class="navbar-brand mainTitle d-flex flex-wrap align-items-center mx-2 my-3">
-                            Tienda de campeones
-                        </p>
-                    </div>
-                    <button class="navbar-toggler my-2 mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse navbarItemsContainer" id="navbarNav">
-                        <ul class="navbar-nav mx-5 list-unstyled">
-                            <li class="nav-item navItem my-0 mx-1 p-0">
-                                <a class="nav-link fw-medium" aria-current="page" href="./index.html" rel="prefetch">Inicio</a>
-                            </li>
-                            <li class="nav-item navItem my-0 mx-1 p-0">
-                                <a class="nav-link fw-medium" href="./about.html" rel="prefetch">Nosotros</a>
-                            </li>
-                        </ul>
-                        <ul class="list-unstyled mx-2 my-0 d-flex flex-row">
-                            <li id="loginBtn" class="p-0 my-0 mx-1 navItem d-block">
-                                <button class="material-symbols-sharp button">
-                                    login
-                                </button>
-                            </li>
-                            <li id="logoutBtn" class="mx-2 nav-item d-none">
-                                <button class="material-symbols-sharp button">
-                                    logout
-                                </button>
-                            </li>
-                            <li class="p-0 my-0 mx-1 navItem">
-                                <a href="./cart.html" class="material-symbols-sharp button text-decoration-none" id="cartBtn" rel="prefetch">
-                                    shopping_cart
-                                </a>
-                            </li>
-                            <li id="togglerBtnDM" class="p-0 my-0 mx-1 navItem d-block">
-                                <button class="material-symbols-sharp button">
-                                    dark_mode
-                                </button>
-                            </li>
-                            <li id="togglerBtnLM" class="p-0 my-0 mx-1 navItem d-none">
-                                <button class="material-symbols-sharp button ">
-                                    light_mode
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logo-light.png" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Tienda de campeones</title>
+</head>
+
+<body id="bodyId">
+    <header class="container-fluid headerClass mx-0 px-0 mb-5">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline" id="navbarId">
+            <div class="container-fluid">
+                <div class="d-flex flex-wrap">
+                    <a href="./index.html" rel="prefetch">
+                        <img class="mx-2" src="../img/logo-light.png" alt="logo" id="logo" loading="lazy">
+                    </a>
+                    <p class="navbar-brand mainTitle d-flex flex-wrap align-items-center mx-2 my-3">
+                        Tienda de campeones
+                    </p>
                 </div>
-            </nav>
-        </header>
-        <main>
-            <h1 class="mx-5 mainTitle">Nuestros productos</h1>
-            <div class="mx-5 d-flex flex-row flex-wrap justify-content-evenly my-5">
-                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
-                    <div class="modalCountry">
-                        <h2 class="modalProduct__title">Argentina</h2>
-                        <button type="button" class="btn modalProduct d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#modalArgentina">
-                        <img src="../img/products/Background_img/Argentina.svg" alt="argentina" loading="lazy">
-                        </button>
-                    </div>
-                    <div>
-                        <div class="modal fade cardContainer" id="modalArgentina" tabindex="-1" aria-labelledby="argentinaModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title fs-5" id="argentinaModalLabel">Selección Argentina</h2>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Argentina/Argentina-1978-primera.svg" class="card-img-top" alt="argentina" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Argentina 1978</h5>
-                                                <ul>
-                                                    <li>Rendí homenaje a Argentina como país anfitrión del Mundial 1978 con esta camiseta clásica. Los colores celeste y blanco representan el triunfo de la Albiceleste en un torneo lleno de emoción y drama.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Argentina/Argentina-1986-primera.svg" class="card-img-top" alt="argentina" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Argentina 1986</h5>
-                                                <ul>
-                                                    <li>Reviví la magia de Diego Maradona en el Mundial 1986 con esta camiseta icónica de Argentina. Los colores celeste y blanco te llevarán de vuelta a México, donde Maradona dejó su huella con el "Gol del Siglo" y la "Mano de Dios".</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Argentina/Argentina-2021-Primera.svg" class="card-img-top" alt="argentina" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Argentina 2021</h5>
-                                                <ul>
-                                                    <li>Reviví la emoción de la Copa América con esta icónica camiseta versión 2021 de Argentina, un homenaje al equipo que comenzó la racha de victorias que llevó a la consagración en la copa y luego en Qatar 2022.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Argentina/Argentina-1978-tercera.svg" class="card-img-top" alt="argentina" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Argentina 1978</h5>
-                                                <ul>
-                                                    <li>Camiseta Suplente</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Argentina/Argentina-1986-segunda.svg" class="card-img-top" alt="argentina" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Argentina 1986</h5>
-                                                <ul>
-                                                    <li>Camiseta Suplente</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-                                        <a href="./cart.html" class="btn btn-primary secondaryBtn">Ir al carro</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
-                    <div class="modalCountry">
-                        <h2 class="modalProduct__title">Brasil</h2>
-                        <button type="button" class="btn modalProduct d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#modalBrasil">
-                        <img src="../img/products/Background_img/Brasil.svg" alt="brasil" loading="lazy">
-                        </button>
-                    </div>
-                    <div>
-                        <div class="modal fade cardContainer" id="modalBrasil" tabindex="-1" aria-labelledby="modalBrasilLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title fs-5" id="modalBrasilLabel">Selección de Brasil</h2>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Brasil/Brasil-1958-primera.svg" class="card-img-top" alt="brasil" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Brasil 1958</h5>
-                                                <ul>
-                                                    <li>Celebra la gloria de Brasil en el Mundial 1958 con esta camiseta icónica. Lleva los colores amarillo y verde que simbolizan la pasión y la destreza futbolística de la selección brasileña. Revive el momento en que Pelé y compañía se coronaron campeones por primera vez en Suecia.</li>
-                                                    <li class="bold"> Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Brasil/Brasil-1962-primera.svg" class="card-img-top" alt="brasil" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Brasil 1962</h5>
-                                                <ul>
-                                                    <li>Rinde homenaje a la segunda victoria consecutiva de Brasil en el Mundial 1962 con esta camiseta clásica. Los colores amarillo y verde representan la supremacía de Brasil en el fútbol mundial.</li>
-                                                    <li class="bold">Precio $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Brasil/Brasil-1970-primera.svg" class="card-img-top" alt="brasil" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Brasil 1970</h5>
-                                                <ul>
-                                                    <li>Revive el fútbol mágico de Brasil en el Mundial 1970 con esta camiseta legendaria. Los colores amarillo y verde te transportarán a la época en que Pelé, Jairzinho y Tostão deslumbraron al mundo con su juego.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Brasil/Brasil-1994-primera.svg" class="card-img-top" alt="brasil" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Brasil 1994</h5>
-                                                <ul>
-                                                    <li> Conmemora el cuarto título de Brasil en el Mundial 1994 con esta camiseta elegante. Los colores amarillo y verde te recordarán la destreza de Romário y Bebeto en Estados Unidos.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Brasil/Brasil-2002-primera.svg" class="card-img-top" alt="brasil" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Brasil 2002</h5>
-                                                <ul>
-                                                    <li>Celebra la quinta corona mundial de Brasil en el Mundial 2002 con esta camiseta icónica. Los colores amarillo y verde te transportarán a Japón y Corea del Sur, donde Ronaldo se convirtió en el máximo goleador del torneo.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Brasil/Brasil-1970-segunda.svg" class="card-img-top" alt="brasil" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Brasil 1970</h5>
-                                                <ul>
-                                                    <li>Camiseta Suplente</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Brasil/Brasil-1994-segunda.svg" class="card-img-top" alt="brasil" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Brasil 1994</h5>
-                                                <ul>
-                                                    <li>Camiseta Suplente</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Brasil/Brasil-2002-segunda.svg" class="card-img-top" alt="brasil" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Brasil 2002</h5>
-                                                <ul>
-                                                    <li>Camiseta Suplente</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-                                        <a href="./cart.html" class="btn btn-primary secondaryBtn">Ir al carro</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
-                    <div class="modalCountry">
-                        <h2 class="modalProduct__title">Alemania</h2>
-                        <button type="button" class="btn modalProduct d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#alemaniaModal">
-                        <img src="../img/products/Background_img/Alemania.svg" alt="alemania" loading="lazy">
-                        </button>
-                    </div>
-                    <div>
-                        <div class="modal fade cardContainer" id="alemaniaModal" tabindex="-1" aria-labelledby="alemaniaModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title fs-5" id="alemaniaModalLabel">Selección Alemana</h2>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Alemania/Alemania-1954-primera.svg" class="card-img-top" alt="alemania" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Alemania 1954</h5>
-                                                <ul>
-                                                    <li>Celebra la victoria de Alemania en el Mundial 1954 con esta camiseta nostálgica. El blanco y negro evocan la época dorada de Fritz Walter y Helmut Rahn. Únete a la tradición futbolística alemana y conmemora su primera victoria en un Mundial.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Alemania/Alemania-1974-primera.svg" class="card-img-top" alt="alemania" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Alemania 1974</h5>
-                                                <ul>
-                                                    <li>Celebra la victoria de Alemania en el Mundial 1974 con esta camiseta histórica. El blanco y negro, junto con el toque de rojo, recuerdan la actuación de Gerd Müller y Franz Beckenbauer en casa.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Alemania/Alemania-2014-primera.svg" class="card-img-top" alt="alemania" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Alemania 2014</h5>
-                                                <ul>
-                                                    <li>Celebra el cuarto título de la Copa del Mundo de Alemania con esta camiseta emblemática. El negro y rojo reflejan la determinación y el espíritu de equipo que llevó a la selección alemana a la gloria en Brasil.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Alemania/Alemania-1954-primera.svg" class="card-img-top" alt="alemania" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Alemania 1954</h5>
-                                                <ul>
-                                                    <li>Camiseta Suplente</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Alemania/Alemania-1974-segunda.svg" class="card-img-top" alt="alemania" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Alemania 1974</h5>
-                                                <ul>
-                                                    <li>Camiseta Suplente</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Alemania/Alemania-2014-segunda.svg" class="card-img-top" alt="alemania" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Alemania 2014</h5>
-                                                <ul>
-                                                    <li>Camiseta Suplente</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-                                        <a href="./cart.html" class="btn btn-primary secondaryBtn">Ir al carro</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
-                    <div class="modalCountry">
-                        <h2 class="modalProduct__title">España</h2>
-                        <button type="button" class="btn modalProduct d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#modalEspana">
-                        <img src="../img/products/Background_img/España.svg" alt="espana" loading="lazy">
-                        </button>
-                    </div>
-                    <div>
-                        <div class="modal fade cardContainer" id="modalEspana" tabindex="-1" aria-labelledby="modalEspanaLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title fs-5" id="modalEspanaLabel">Selección de España</h2>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/España/España-2010-primera.svg" class="card-img-top" alt="españa" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta España 2010</h5>
-                                                <ul>
-                                                    <li>Celebra el triunfo de España en el Mundial 2010 con esta camiseta de estilo moderno. El rojo y el dorado te transportarán al emocionante fútbol tiki-taka que conquistó el mundo.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/España/España-2010-segunda.svg" class="card-img-top" alt="españa" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta España 2010</h5>
-                                                <ul>
-                                                    <li>Camiseta Suplente</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-                                        <a href="./cart.html" class="btn btn-primary secondaryBtn">Ir al carro</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center">
-                    <img class="img-fluid" src="../img/copa-del-mundo.png" alt="copa-del-mundo">
-                </div>
-
-                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
-                    <div class="modalCountry">
-                        <h2 class="modalProduct__title">Italia</h2>
-                        <button type="button" class="btn modalProduct d-flex flex-column align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#modalItalia">
-                        <img src="../img/products/Background_img/Italia.svg" alt="italia" loading="lazy">
-                        </button>
-                    </div>
-                    <div>
-                        <div class="modal fade cardContainer" id="modalItalia" tabindex="-1" aria-labelledby="modalItaliaLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title fs-5" id="modalItaliaLabel">Selección Italiana</h2>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Italia/Italia-1934-Primera.svg" class="card-img-top" alt="italia" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Italia 1934</h5>
-                                                <ul>
-                                                    <li>Rinde homenaje a Italia como anfitrión del Mundial 1934 con esta camiseta clásica. El azul y el blanco de la Azzurri simbolizan la victoria en casa y la destreza futbolística que los llevó al triunfo.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Italia/Italia-1938-Segunda.svg" class="card-img-top" alt="italia" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Suplente Italia 1938</h5>
-                                                <ul>
-                                                    <li>Conmemora la segunda victoria consecutiva de Italia en el Mundial 1938 con esta elegante camiseta. El azul y el blanco te transportarán al momento en que Italia consolidó su dominio en el fútbol mundial</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Camiseta Italia</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Italia/Italia-1982-Primera.svg" class="card-img-top" alt="italia" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Italia 1982</h5>
-                                                <ul>
-                                                    <li>Conmemora la victoria de Italia en el Mundial 1982 con esta elegante camiseta. El azul y el blanco te transportarán a España, donde Paolo Rossi y Dino Zoff se convirtieron en héroes nacionales.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Italia/Italia-1982-Segunda.svg" class="card-img-top" alt="italia" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Italia 1982</h5>
-                                                <ul>
-                                                    <li>Camiseta Suplente</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Italia/Italia-2006-Primera.svg" class="card-img-top" alt="italia" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Italia 2006</h5>
-                                                <ul>
-                                                    <li>Revive el triunfo de Italia en el Mundial 2006 con esta camiseta nostálgica. El azul y el blanco te llevarán de vuelta a Alemania, donde Fabio Cannavaro y Gianluigi Buffon lideraron a la Azzurri hacia la victoria.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Italia/Italia-2006-Segunda.svg" class="card-img-top" alt="italia" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Italia 2006</h5>
-                                                <ul>
-                                                    <li>Camiseta Suplente</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-                                        <a href="./cart.html" class="btn btn-primary secondaryBtn">Ir al carro</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
-                    <div class="modalCountry">
-                        <h2 class="modalProduct__title">Francia</h2>
-                        <button type="button" class="btn modalProduct d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#modalFrancia">
-                        <img src="../img/products/Background_img/Francia.svg" alt="francia" loading="lazy">
-                        </button>
-                    </div>
-                    <div>
-                        <div class="modal fade cardContainer" id="modalFrancia" tabindex="-1" aria-labelledby="modalFranciaLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title fs-5" id="modalFranciaLabel">Selección de Francia</h2>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Francia/Francia-1998-primera.svg" class="card-img-top" alt="francia" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta de Francia 1998</h5>
-                                                <ul>
-                                                    <li>Rinde homenaje a la victoria de Francia en el Mundial 1998 con esta camiseta moderna y elegante. Los colores azul y blanco, con un toque de rojo, simbolizan la unidad y la fuerza de Les Bleus.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Francia/Francia-1998-segunda.svg" class="card-img-top" alt="francia" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta de Francia 1998</h5>
-                                                <ul>
-                                                    <li>Camiseta Suplente</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-                                        <a href="./cart.html" class="btn btn-primary secondaryBtn">Ir al carro</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
-                    <div class="modalCountry">
-                        <h2 class="modalProduct__title">Inglaterra</h2>
-                        <button type="button" class="btn modalProduct d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#modalInglaterra">
-                        <img src="../img/products/Background_img/Inglaterra.svg" alt="inglaterra" loading="lazy">
-                        </button>
-                    </div>
-                    <div>
-                        <div class="modal fade cardContainer" id="modalInglaterra" tabindex="-1" aria-labelledby="modalInglaterraLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title fs-5" id="modalInglaterraLabel">Selección Inglesa</h2>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Inglaterra/Inglaterra-1968-Primera.svg" class="card-img-top" alt="inglaterra" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta de Inglaterra 1966</h5>
-                                                <ul>
-                                                    <li>Conmemora el histórico triunfo de Inglaterra en el Mundial 1966 con esta camiseta clásica. El rojo y el blanco de la bandera inglesa se combinan en esta prenda que recuerda la hazaña de Bobby Moore y Geoff Hurst en casa.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Inglaterra/Inglaterra-1966-Segunda.svg" class="card-img-top" alt="inglaterra" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta de Inglaterra 1966</h5>
-                                                <ul>
-                                                    <li>Camiseta Suplente</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-                                        <a href="./cart.html" class="btn btn-primary secondaryBtn">Ir al carro</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
-                    <div class="modalCountry">
-                        <h2 class="modalProduct__title">Uruguay</h2>
-                        <button type="button" class="btn modalProduct d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#modalUruguay">
-                        <img src="../img/products/Background_img/Uruguay.svg" alt="uruguay" loading="lazy">
-                        </button>
-                    </div>
-                    <div>
-                        <div class="modal fade cardContainer" id="modalUruguay" tabindex="-1" aria-labelledby="modalUruguayLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h2 class="modal-title fs-5" id="modalUruguayLabel">Selección Uruguaya</h2>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Uruguay/Uruguay-1930-Primera.svg" class="card-img-top" alt="uruguay" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Uruguay 1930</h5>
-                                                <ul>
-                                                    <li>Celebra el legado de Uruguay como el primer campeón mundial con esta camiseta histórica. Los colores celeste y blanco evocan la pasión y la gloria de aquel lejano torneo que marcó el comienzo de una tradición futbolística.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                        <div class="card productCard my-3" style="width: 18rem;">
-                                            <img src="../img/products/Uruguay/Uruguay-1950-Primera.svg" class="card-img-top" alt="uruguay" loading="lazy">
-                                            <div class="card-body d-flex flex-column justify-content-evenly">
-                                                <h5 class="card-title">Camiseta Uruguay 1950</h5>
-                                                <ul>
-                                                    <li>Revive el milagro de Maracaná con esta camiseta icónica de Uruguay. El celeste y blanco te llevarán de vuelta al partido final en el que Uruguay derrotó a Brasil en uno de los momentos más legendarios de la historia del fútbol.</li>
-                                                    <li class="bold">Precio: $4.900</li>
-                                                </ul>
-                                                <button type="submit" class="btn btn-success addProductBtn">Agregar al carro</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
-                                        <a href="./cart.html" class="btn btn-primary secondaryBtn" rel="prefetch">Ir al carro</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </main>
-        <footer class="mt-5 p-5" id="footerId">
-            <div class="container-fluid row" >
-                <div class="col d-flex align-items-center footerItem fs-5">
-                    ©Tienda de campeones - Todos los derechos reservados
-                </div>
-                <div class="col">
-                    <ul class="list-unstyled nav-underline my-5">
-                        <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="https://www.andreani.com/#!/personas" target="_blank" rel="preconnect">Seguí tu pedido</a></li>
-                        <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="https://instagram.com/" target="_blank" rel="preconnect">Instagram</a></li>
-                        <li><a class="nav-item footerItem nav-link nav d-flex justify-content-end link-offset-3" href="https://facebook.com/" target="_blank" rel="preconnect">Facebook</a></li>
+                <button class="navbar-toggler my-2 mx-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navbarItemsContainer" id="navbarNav">
+                    <ul class="navbar-nav mx-5 list-unstyled">
+                        <li class="nav-item navItem my-0 mx-1 p-0">
+                            <a class="nav-link fw-medium" aria-current="page" href="./index.html"
+                                rel="prefetch">Inicio</a>
+                        </li>
+                        <li class="nav-item navItem my-0 mx-1 p-0">
+                            <a class="nav-link fw-medium" href="./about.html" rel="prefetch">Nosotros</a>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled mx-2 my-0 d-flex flex-row">
+                        <li class="p-0 my-0 mx-1 navItem nav-item d-block" id="log">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="material-symbols-sharp button text-decoration-none" id="loginBtn"
+                                data-bs-toggle="modal" data-bs-target="#loginModal">Login
+                            </button>
+                        </li>
+                        <li id="logoutBtn" class="p-0 my-0 mx-1 navItem nav-item d-none">
+                            <button class="material-symbols-sharp button" id="logoutBtn" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                                logout
+                            </button>
+                        </li>
+                        <li class="p-0 my-0 mx-1 navItem nav-item">
+                            <a href="./cart.html" class="material-symbols-sharp button text-decoration-none"
+                                id="cartBtn" rel="prefetch">
+                                shopping_cart
+                            </a>
+                        </li>
+                        <li id="togglerBtnDM" class="p-0 my-0 mx-1 navItem nav-item d-block">
+                            <button class="material-symbols-sharp button">
+                                dark_mode
+                            </button>
+                        </li>
+                        <li id="togglerBtnLM" class="p-0 my-0 mx-1 navItem nav-item d-none">
+                            <button class="material-symbols-sharp button ">
+                                light_mode
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
-        </footer>
-        <script type="module" src="../src/main.js" async></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    </body>
+        </nav>
+    </header>
+    <main>
+        <section><!-- Modal -->
+            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="loginForm">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="inputEmail" class="form-label">Dirección de e-mail</label>
+                                    <input type="email" name="loginEmail" class="form-control" id="inputEmail"
+                                        aria-describedby="emailHelp" required autocomplete="email">
+                                    <div id="emailHelp" class="form-text">Ingrese una direccion válida.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputPassword" class="form-label">Contraseña</label>
+                                    <div class="d-flex flex-row align-items-center justify-content-evenly">
+                                        <input type="password" name="loginPassword" class="form-control"
+                                            id="inputPassword" aria-describedby="passwordHelp" minlength="4"
+                                            maxlength="20" required autocomplete="current-password">
+                                        <span class="material-symbols-sharp ms-2 d-block"
+                                            id="loginVisibilityOn">visibility</span>
+                                        <span class="material-symbols-sharp ms-2 d-none"
+                                            id="loginVisibilityOff">visibility_off</span>
+                                    </div>
+                                </div>
+                                <input type="submit" style="display: none;" id="submitLoginBtn">
+                            </form>
+                        </div>
+                        <div class="modal-footer d-flex flex-row align-items-center justify-content-between">
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">Registrarme</button>
+                            <div>
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-success" id="logBtn">Ingresar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <!-- Modal to register -->
+            <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="registerForm">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="registerModalLabel">Registrarse</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="regForm">
+                                <div class="mb-3">
+                                    <label for="inputRegisterFullName" class="form-label">Nombre</label>
+                                    <input type="text" name="nombre" class="form-control" id="inputRegisterFullName"
+                                        aria-describedby="nameHelp" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterLastName" class="form-label">Apellido</label>
+                                    <input type="text" name="apellido" class="form-control" id="inputRegisterLastName"
+                                        aria-describedby="apellidoHelp" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterDNI" class="form-label">DNI</label>
+                                    <input type="text" name="dni" class="form-control" id="inputRegisterDNI"
+                                        aria-describedby="dniHelp" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterDomicilio" class="form-label">Domicilio</label>
+                                    <input type="text" name="domicilio" class="form-control" id="inputRegisterDomicilio"
+                                        aria-describedby="domicilioHelp" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterEmail" class="form-label">Correo electrónico</label>
+                                    <input type="email" name="registerEmail" class="form-control"
+                                        id="inputRegisterEmail" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con
+                                        entidades externas.</div>
+                                </div>
+                                <div>
+                                <label for="inputRegisterPassword" class="form-label">Contraseña</label>
+                                    <div class="mb-3 d-flex flex-row align-items-center justify-content-evenly">
+                                        <input type="password" name="registerPassword" class="form-control"
+                                            id="inputRegisterPassword" aria-describedby="passwordHelp" minlength="8"
+                                            required>
+                                        <span class="material-symbols-sharp ms-2 d-block"
+                                            id="registerVisibilityOn">visibility</span>
+                                        <span class="material-symbols-sharp ms-2 d-none"
+                                            id="registerVisibilityOff">visibility_off</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputRegisterConfirmPassword" class="form-label">Confirmar
+                                        Contraseña</label>
+                                    <input type="password" name="registerConfirmPassword" class="form-control"
+                                        id="inputRegisterConfirmPassword" aria-describedby="confirmPasswordHelp"
+                                        minlength="8" required>
+                                </div>
+                                <div id="passwordHelp" class="form-text">Tu contraseña debe tener al menos 8 caracteres
+                                    y debe incluir números, letras mayúsculas/minúsculas y símbolos.</div>
+                                <input type="submit" style="display: none;" id="submitRegisterBtn">
+                                <div id="successMessage" style="display: none;" class="alert alert-success mt-3">
+                                    Usuario registrado con éxito.
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-targer="#loginModal">Cancelar</button>
+                            <button type="submit" class="btn btn-success" id="registerBtn">Registrarse</button>
+                            <input type="submit" style="display: none;" id="submitRegisterBtn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal to logout -->
+        <section>
+            <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="logoutModalLabel">Cerrar sesión</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ¿Estás seguro/a que querés finalizar tu sesión?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-danger" id="endClientSession">Cerrar sesión</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h1 class="mx-5 mainTitle">Nuestros productos</h1>
+        <div class="mx-5 d-flex flex-row flex-wrap justify-content-evenly my-5">
+            <section
+                class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <div class="modalCountry">
+                    <h2 class="modalProduct__title">Argentina</h2>
+                    <button type="button" class="btn modalProduct d-flex align-items-center justify-content-center"
+                        data-bs-toggle="modal" data-bs-target="#modalArgentina">
+                        <img src="../img/products/Background_img/Argentina.svg" alt="argentina" loading="lazy">
+                    </button>
+                </div>
+                <div>
+                    <div class="modal fade cardContainer" id="modalArgentina" tabindex="-1"
+                        aria-labelledby="argentinaModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title fs-5" id="argentinaModalLabel">Selección Argentina</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div
+                                    class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Argentina/Argentina-1978-primera.svg"
+                                            class="card-img-top" alt="argentina" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Argentina 1978</h5>
+                                            <ul>
+                                                <li>Rendí homenaje a Argentina como país anfitrión del Mundial 1978 con
+                                                    esta camiseta clásica. Los colores celeste y blanco representan el
+                                                    triunfo de la Albiceleste en un torneo lleno de emoción y drama.
+                                                </li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Argentina/Argentina-1986-primera.svg"
+                                            class="card-img-top" alt="argentina" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Argentina 1986</h5>
+                                            <ul>
+                                                <li>Reviví la magia de Diego Maradona en el Mundial 1986 con esta
+                                                    camiseta icónica de Argentina. Los colores celeste y blanco te
+                                                    llevarán de vuelta a México, donde Maradona dejó su huella con el
+                                                    "Gol del Siglo" y la "Mano de Dios".</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Argentina/Argentina-2021-Primera.svg"
+                                            class="card-img-top" alt="argentina" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Argentina 2021</h5>
+                                            <ul>
+                                                <li>Reviví la emoción de la Copa América con esta icónica camiseta
+                                                    versión 2021 de Argentina, un homenaje al equipo que comenzó la
+                                                    racha de victorias que llevó a la consagración en la copa y luego en
+                                                    Qatar 2022.</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Argentina/Argentina-1978-tercera.svg"
+                                            class="card-img-top" alt="argentina" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Argentina 1978</h5>
+                                            <ul>
+                                                <li>Camiseta Suplente</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Argentina/Argentina-1986-segunda.svg"
+                                            class="card-img-top" alt="argentina" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Argentina 1986</h5>
+                                            <ul>
+                                                <li>Camiseta Suplente</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Volver</button>
+                                    <a href="./cart.html" class="btn btn-primary secondaryBtn">Ir al carro</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <div class="modalCountry">
+                    <h2 class="modalProduct__title">Brasil</h2>
+                    <button type="button" class="btn modalProduct d-flex align-items-center justify-content-center"
+                        data-bs-toggle="modal" data-bs-target="#modalBrasil">
+                        <img src="../img/products/Background_img/Brasil.svg" alt="brasil" loading="lazy">
+                    </button>
+                </div>
+                <div>
+                    <div class="modal fade cardContainer" id="modalBrasil" tabindex="-1"
+                        aria-labelledby="modalBrasilLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title fs-5" id="modalBrasilLabel">Selección de Brasil</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div
+                                    class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Brasil/Brasil-1958-primera.svg" class="card-img-top"
+                                            alt="brasil" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Brasil 1958</h5>
+                                            <ul>
+                                                <li>Celebra la gloria de Brasil en el Mundial 1958 con esta camiseta
+                                                    icónica. Lleva los colores amarillo y verde que simbolizan la pasión
+                                                    y la destreza futbolística de la selección brasileña. Revive el
+                                                    momento en que Pelé y compañía se coronaron campeones por primera
+                                                    vez en Suecia.</li>
+                                                <li class="bold"> Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Brasil/Brasil-1962-primera.svg" class="card-img-top"
+                                            alt="brasil" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Brasil 1962</h5>
+                                            <ul>
+                                                <li>Rinde homenaje a la segunda victoria consecutiva de Brasil en el
+                                                    Mundial 1962 con esta camiseta clásica. Los colores amarillo y verde
+                                                    representan la supremacía de Brasil en el fútbol mundial.</li>
+                                                <li class="bold">Precio $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Brasil/Brasil-1970-primera.svg" class="card-img-top"
+                                            alt="brasil" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Brasil 1970</h5>
+                                            <ul>
+                                                <li>Revive el fútbol mágico de Brasil en el Mundial 1970 con esta
+                                                    camiseta legendaria. Los colores amarillo y verde te transportarán a
+                                                    la época en que Pelé, Jairzinho y Tostão deslumbraron al mundo con
+                                                    su juego.</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Brasil/Brasil-1994-primera.svg" class="card-img-top"
+                                            alt="brasil" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Brasil 1994</h5>
+                                            <ul>
+                                                <li> Conmemora el cuarto título de Brasil en el Mundial 1994 con esta
+                                                    camiseta elegante. Los colores amarillo y verde te recordarán la
+                                                    destreza de Romário y Bebeto en Estados Unidos.</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Brasil/Brasil-2002-primera.svg" class="card-img-top"
+                                            alt="brasil" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Brasil 2002</h5>
+                                            <ul>
+                                                <li>Celebra la quinta corona mundial de Brasil en el Mundial 2002 con
+                                                    esta camiseta icónica. Los colores amarillo y verde te transportarán
+                                                    a Japón y Corea del Sur, donde Ronaldo se convirtió en el máximo
+                                                    goleador del torneo.</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Brasil/Brasil-1970-segunda.svg" class="card-img-top"
+                                            alt="brasil" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Brasil 1970</h5>
+                                            <ul>
+                                                <li>Camiseta Suplente</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Brasil/Brasil-1994-segunda.svg" class="card-img-top"
+                                            alt="brasil" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Brasil 1994</h5>
+                                            <ul>
+                                                <li>Camiseta Suplente</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Brasil/Brasil-2002-segunda.svg" class="card-img-top"
+                                            alt="brasil" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Brasil 2002</h5>
+                                            <ul>
+                                                <li>Camiseta Suplente</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Volver</button>
+                                    <a href="./cart.html" class="btn btn-primary secondaryBtn">Ir al carro</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <div class="modalCountry">
+                    <h2 class="modalProduct__title">Alemania</h2>
+                    <button type="button" class="btn modalProduct d-flex align-items-center justify-content-center"
+                        data-bs-toggle="modal" data-bs-target="#alemaniaModal">
+                        <img src="../img/products/Background_img/Alemania.svg" alt="alemania" loading="lazy">
+                    </button>
+                </div>
+                <div>
+                    <div class="modal fade cardContainer" id="alemaniaModal" tabindex="-1"
+                        aria-labelledby="alemaniaModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title fs-5" id="alemaniaModalLabel">Selección Alemana</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div
+                                    class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Alemania/Alemania-1954-primera.svg"
+                                            class="card-img-top" alt="alemania" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Alemania 1954</h5>
+                                            <ul>
+                                                <li>Celebra la victoria de Alemania en el Mundial 1954 con esta camiseta
+                                                    nostálgica. El blanco y negro evocan la época dorada de Fritz Walter
+                                                    y Helmut Rahn. Únete a la tradición futbolística alemana y conmemora
+                                                    su primera victoria en un Mundial.</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Alemania/Alemania-1974-primera.svg"
+                                            class="card-img-top" alt="alemania" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Alemania 1974</h5>
+                                            <ul>
+                                                <li>Celebra la victoria de Alemania en el Mundial 1974 con esta camiseta
+                                                    histórica. El blanco y negro, junto con el toque de rojo, recuerdan
+                                                    la actuación de Gerd Müller y Franz Beckenbauer en casa.</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Alemania/Alemania-2014-primera.svg"
+                                            class="card-img-top" alt="alemania" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Alemania 2014</h5>
+                                            <ul>
+                                                <li>Celebra el cuarto título de la Copa del Mundo de Alemania con esta
+                                                    camiseta emblemática. El negro y rojo reflejan la determinación y el
+                                                    espíritu de equipo que llevó a la selección alemana a la gloria en
+                                                    Brasil.</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Alemania/Alemania-1954-primera.svg"
+                                            class="card-img-top" alt="alemania" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Alemania 1954</h5>
+                                            <ul>
+                                                <li>Camiseta Suplente</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Alemania/Alemania-1974-segunda.svg"
+                                            class="card-img-top" alt="alemania" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Alemania 1974</h5>
+                                            <ul>
+                                                <li>Camiseta Suplente</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Alemania/Alemania-2014-segunda.svg"
+                                            class="card-img-top" alt="alemania" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Alemania 2014</h5>
+                                            <ul>
+                                                <li>Camiseta Suplente</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Volver</button>
+                                    <a href="./cart.html" class="btn btn-primary secondaryBtn">Ir al carro</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <div class="modalCountry">
+                    <h2 class="modalProduct__title">España</h2>
+                    <button type="button" class="btn modalProduct d-flex align-items-center justify-content-center"
+                        data-bs-toggle="modal" data-bs-target="#modalEspana">
+                        <img src="../img/products/Background_img/España.svg" alt="espana" loading="lazy">
+                    </button>
+                </div>
+                <div>
+                    <div class="modal fade cardContainer" id="modalEspana" tabindex="-1"
+                        aria-labelledby="modalEspanaLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title fs-5" id="modalEspanaLabel">Selección de España</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div
+                                    class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/España/España-2010-primera.svg" class="card-img-top"
+                                            alt="españa" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta España 2010</h5>
+                                            <ul>
+                                                <li>Celebra el triunfo de España en el Mundial 2010 con esta camiseta de
+                                                    estilo moderno. El rojo y el dorado te transportarán al emocionante
+                                                    fútbol tiki-taka que conquistó el mundo.</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/España/España-2010-segunda.svg" class="card-img-top"
+                                            alt="españa" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta España 2010</h5>
+                                            <ul>
+                                                <li>Camiseta Suplente</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Volver</button>
+                                    <a href="./cart.html" class="btn btn-primary secondaryBtn">Ir al carro</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div
+                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center">
+                <img class="img-fluid" src="../img/copa-del-mundo.png" alt="copa-del-mundo">
+            </div>
+
+            <section
+                class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <div class="modalCountry">
+                    <h2 class="modalProduct__title">Italia</h2>
+                    <button type="button"
+                        class="btn modalProduct d-flex flex-column align-items-center justify-content-center"
+                        data-bs-toggle="modal" data-bs-target="#modalItalia">
+                        <img src="../img/products/Background_img/Italia.svg" alt="italia" loading="lazy">
+                    </button>
+                </div>
+                <div>
+                    <div class="modal fade cardContainer" id="modalItalia" tabindex="-1"
+                        aria-labelledby="modalItaliaLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title fs-5" id="modalItaliaLabel">Selección Italiana</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div
+                                    class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Italia/Italia-1934-Primera.svg" class="card-img-top"
+                                            alt="italia" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Italia 1934</h5>
+                                            <ul>
+                                                <li>Rinde homenaje a Italia como anfitrión del Mundial 1934 con esta
+                                                    camiseta clásica. El azul y el blanco de la Azzurri simbolizan la
+                                                    victoria en casa y la destreza futbolística que los llevó al
+                                                    triunfo.</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Italia/Italia-1938-Segunda.svg" class="card-img-top"
+                                            alt="italia" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Suplente Italia 1938</h5>
+                                            <ul>
+                                                <li>Conmemora la segunda victoria consecutiva de Italia en el Mundial
+                                                    1938 con esta elegante camiseta. El azul y el blanco te
+                                                    transportarán al momento en que Italia consolidó su dominio en el
+                                                    fútbol mundial</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Camiseta
+                                                Italia</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Italia/Italia-1982-Primera.svg" class="card-img-top"
+                                            alt="italia" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Italia 1982</h5>
+                                            <ul>
+                                                <li>Conmemora la victoria de Italia en el Mundial 1982 con esta elegante
+                                                    camiseta. El azul y el blanco te transportarán a España, donde Paolo
+                                                    Rossi y Dino Zoff se convirtieron en héroes nacionales.</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Italia/Italia-1982-Segunda.svg" class="card-img-top"
+                                            alt="italia" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Italia 1982</h5>
+                                            <ul>
+                                                <li>Camiseta Suplente</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Italia/Italia-2006-Primera.svg" class="card-img-top"
+                                            alt="italia" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Italia 2006</h5>
+                                            <ul>
+                                                <li>Revive el triunfo de Italia en el Mundial 2006 con esta camiseta
+                                                    nostálgica. El azul y el blanco te llevarán de vuelta a Alemania,
+                                                    donde Fabio Cannavaro y Gianluigi Buffon lideraron a la Azzurri
+                                                    hacia la victoria.</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Italia/Italia-2006-Segunda.svg" class="card-img-top"
+                                            alt="italia" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Italia 2006</h5>
+                                            <ul>
+                                                <li>Camiseta Suplente</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Volver</button>
+                                    <a href="./cart.html" class="btn btn-primary secondaryBtn">Ir al carro</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <div class="modalCountry">
+                    <h2 class="modalProduct__title">Francia</h2>
+                    <button type="button" class="btn modalProduct d-flex align-items-center justify-content-center"
+                        data-bs-toggle="modal" data-bs-target="#modalFrancia">
+                        <img src="../img/products/Background_img/Francia.svg" alt="francia" loading="lazy">
+                    </button>
+                </div>
+                <div>
+                    <div class="modal fade cardContainer" id="modalFrancia" tabindex="-1"
+                        aria-labelledby="modalFranciaLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title fs-5" id="modalFranciaLabel">Selección de Francia</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div
+                                    class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Francia/Francia-1998-primera.svg" class="card-img-top"
+                                            alt="francia" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta de Francia 1998</h5>
+                                            <ul>
+                                                <li>Rinde homenaje a la victoria de Francia en el Mundial 1998 con esta
+                                                    camiseta moderna y elegante. Los colores azul y blanco, con un toque
+                                                    de rojo, simbolizan la unidad y la fuerza de Les Bleus.</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Francia/Francia-1998-segunda.svg" class="card-img-top"
+                                            alt="francia" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta de Francia 1998</h5>
+                                            <ul>
+                                                <li>Camiseta Suplente</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Volver</button>
+                                    <a href="./cart.html" class="btn btn-primary secondaryBtn">Ir al carro</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <div class="modalCountry">
+                    <h2 class="modalProduct__title">Inglaterra</h2>
+                    <button type="button" class="btn modalProduct d-flex align-items-center justify-content-center"
+                        data-bs-toggle="modal" data-bs-target="#modalInglaterra">
+                        <img src="../img/products/Background_img/Inglaterra.svg" alt="inglaterra" loading="lazy">
+                    </button>
+                </div>
+                <div>
+                    <div class="modal fade cardContainer" id="modalInglaterra" tabindex="-1"
+                        aria-labelledby="modalInglaterraLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title fs-5" id="modalInglaterraLabel">Selección Inglesa</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div
+                                    class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Inglaterra/Inglaterra-1968-Primera.svg"
+                                            class="card-img-top" alt="inglaterra" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta de Inglaterra 1966</h5>
+                                            <ul>
+                                                <li>Conmemora el histórico triunfo de Inglaterra en el Mundial 1966 con
+                                                    esta camiseta clásica. El rojo y el blanco de la bandera inglesa se
+                                                    combinan en esta prenda que recuerda la hazaña de Bobby Moore y
+                                                    Geoff Hurst en casa.</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Inglaterra/Inglaterra-1966-Segunda.svg"
+                                            class="card-img-top" alt="inglaterra" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta de Inglaterra 1966</h5>
+                                            <ul>
+                                                <li>Camiseta Suplente</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Volver</button>
+                                    <a href="./cart.html" class="btn btn-primary secondaryBtn">Ir al carro</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-0 mx-2 my-3 d-flex flex-row align-items-center justify-content-center modalTrigger">
+                <div class="modalCountry">
+                    <h2 class="modalProduct__title">Uruguay</h2>
+                    <button type="button" class="btn modalProduct d-flex align-items-center justify-content-center"
+                        data-bs-toggle="modal" data-bs-target="#modalUruguay">
+                        <img src="../img/products/Background_img/Uruguay.svg" alt="uruguay" loading="lazy">
+                    </button>
+                </div>
+                <div>
+                    <div class="modal fade cardContainer" id="modalUruguay" tabindex="-1"
+                        aria-labelledby="modalUruguayLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title fs-5" id="modalUruguayLabel">Selección Uruguaya</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div
+                                    class="modal-body d-flex flex-wrap flex-row align-items-stretch justify-content-evenly">
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Uruguay/Uruguay-1930-Primera.svg" class="card-img-top"
+                                            alt="uruguay" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Uruguay 1930</h5>
+                                            <ul>
+                                                <li>Celebra el legado de Uruguay como el primer campeón mundial con esta
+                                                    camiseta histórica. Los colores celeste y blanco evocan la pasión y
+                                                    la gloria de aquel lejano torneo que marcó el comienzo de una
+                                                    tradición futbolística.</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                    <div class="card productCard my-3" style="width: 18rem;">
+                                        <img src="../img/products/Uruguay/Uruguay-1950-Primera.svg" class="card-img-top"
+                                            alt="uruguay" loading="lazy">
+                                        <div class="card-body d-flex flex-column justify-content-evenly">
+                                            <h5 class="card-title">Camiseta Uruguay 1950</h5>
+                                            <ul>
+                                                <li>Revive el milagro de Maracaná con esta camiseta icónica de Uruguay.
+                                                    El celeste y blanco te llevarán de vuelta al partido final en el que
+                                                    Uruguay derrotó a Brasil en uno de los momentos más legendarios de
+                                                    la historia del fútbol.</li>
+                                                <li class="bold">Precio: $4.900</li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-success addProductBtn">Agregar al
+                                                carro</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Volver</button>
+                                    <a href="./cart.html" class="btn btn-primary secondaryBtn" rel="prefetch">Ir al
+                                        carro</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="mt-5 p-4" id="footerId">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="footerItem fs-7 text-center">
+                        ©Tienda de campeones - Todos los derechos reservados
+                    </p>
+                </div>
+                <div class="col">
+                    <ul class="list-unstyled nav-underline d-flex flex-wrap justify-content-center align-items-center">
+                        <li><a class="nav-item footerItem nav-link link-offset-3" href="https://www.andreani.com/#!/personas" target="_blank" rel="preconnect">Seguí tu pedido</a></li>
+                        <li><a class="nav-item footerItem nav-link link-offset-3" href="https://instagram.com/" target="_blank" rel="preconnect">Instagram</a></li>
+                        <li><a class="nav-item footerItem nav-link link-offset-3" href="https://facebook.com/" target="_blank" rel="preconnect">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="../src/main.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
