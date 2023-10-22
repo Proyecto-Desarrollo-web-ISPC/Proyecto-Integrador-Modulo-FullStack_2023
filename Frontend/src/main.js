@@ -8,19 +8,13 @@ if(path.includes('about.html')){
     document.addEventListener("DOMContentLoaded", validateFields());
 };
 
-// Ejecución de modos de tema
-setDarkMode();
-function setDarkMode(){
-    basicStructure.togglerBtnDM.addEventListener("click", () => {
-        toggleMode.darkMode();
-    });
-}
-
-setLightMode();
-function setLightMode(){
-    basicStructure.togglerBtnLM.addEventListener("click", () => {
-        toggleMode.lightMode();
-    })
-};
-
 document.addEventListener("DOMContentLoaded", validateForms());
+
+// Ejecución de modos de tema
+basicStructure.togglerBtnDM.addEventListener("click", () => {
+    toggleTheme('dark');
+});
+
+basicStructure.togglerBtnLM.addEventListener("click", () => {
+    toggleTheme('light');
+})
