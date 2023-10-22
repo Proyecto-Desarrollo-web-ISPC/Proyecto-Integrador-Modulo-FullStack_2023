@@ -41,14 +41,14 @@
                         </li>
                     </ul>
                     <ul class="list-unstyled mx-2 my-0 d-flex flex-row">
-                        <li id="loginBtn" class="p-0 my-0 mx-1 navItem nav-item d-block">
+                        <li class="p-0 my-0 mx-1 navItem nav-item d-block" id="log">
                             <!-- Button trigger modal -->
-                            <button type="button" class="material-symbols-sharp button text-decoration-none" id="loginBtn" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal"">Login
+                            <button type="button" class="material-symbols-sharp button text-decoration-none" id="loginBtn"
+                                data-bs-toggle="modal" data-bs-target="#loginModal">Login
                             </button>
                         </li>
                         <li id="logoutBtn" class="p-0 my-0 mx-1 navItem nav-item d-none">
-                            <button class="material-symbols-sharp button">
+                            <button class="material-symbols-sharp button" id="logoutBtn" data-bs-toggle="modal" data-bs-target="#logoutModal">
                                 logout
                             </button>
                         </li>
@@ -75,34 +75,45 @@
     </header>
     <main class="container-fluid">
         <section><!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
-                    <div class="modal-content">
+                    <div class="modal-content" id="loginForm">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                            <h5 class="modal-title" id="loginModalLabel">Login</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form>
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Dirección de e-mail</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
+                                    <label for="inputEmail" class="form-label">Dirección de e-mail</label>
+                                    <input type="email" name="loginEmail" class="form-control" id="inputLoginEmail"
+                                        aria-describedby="emailHelp" required autocomplete="email">
                                     <div id="emailHelp" class="form-text">Ingrese una direccion válida.</div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                    <label for="inputPassword" class="form-label">Contraseña</label>
+                                    <div class="d-flex flex-row align-items-center justify-content-evenly">
+                                        <input type="password" name="loginPassword" class="form-control"
+                                            id="inputPassword" aria-describedby="passwordHelp" minlength="4"
+                                            maxlength="20" required autocomplete="current-password">
+                                        <span class="material-symbols-sharp ms-2 d-block"
+                                            id="loginVisibilityOn">visibility</span>
+                                        <span class="material-symbols-sharp ms-2 d-none"
+                                            id="loginVisibilityOff">visibility_off</span>
+                                    </div>
                                 </div>
-
-                                <button type="submit" class="btn btn-primary">Ingresar</button>
+                                <input type="submit" style="display: none;" id="submitLoginBtn">
                             </form>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <div class="modal-footer d-flex flex-row align-items-center justify-content-between">
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal"
                                 data-bs-target="#registerModal">Registrarme</button>
+                            <div>
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-success" id="logBtn">Ingresar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -123,13 +134,13 @@
                         <div class="modal-body">
                             <form id="regForm">
                                 <div class="mb-3">
-                                    <label for="inputRegisterNombre" class="form-label">Nombre</label>
-                                    <input type="text" name="nombre" class="form-control" id="inputRegisterNombre"
+                                    <label for="inputRegisterFullName" class="form-label">Nombre</label>
+                                    <input type="text" name="nombre" class="form-control" id="inputRegisterFullName"
                                         aria-describedby="nameHelp" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="inputRegisterApellido" class="form-label">Apellido</label>
-                                    <input type="text" name="apellido" class="form-control" id="inputRegisterApellido"
+                                    <label for="inputRegisterLastName" class="form-label">Apellido</label>
+                                    <input type="text" name="apellido" class="form-control" id="inputRegisterLastName"
                                         aria-describedby="apellidoHelp" required>
                                 </div>
                                 <div class="mb-3">
@@ -149,27 +160,56 @@
                                     <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con
                                         entidades externas.</div>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="inputRegisterPassword" class="form-label">Contraseña</label>
-                                    <input type="password" name="registerPassword" class="form-control"
-                                        id="inputRegisterPassword" aria-describedby="passwordHelp" minlength="8"
-                                        required>
-                                        <div id="passwordHelp" class="form-text">Tu contraseña debe tener al menos 8 caracteres
-                                            y debe incluir números, letras mayúsculas/minúsculas y símbolos.</div>
+                                <div>
+                                <label for="inputRegisterPassword" class="form-label">Contraseña</label>
+                                    <div class="mb-3 d-flex flex-row align-items-center justify-content-evenly">
+                                        <input type="password" name="registerPassword" class="form-control"
+                                            id="inputRegisterPassword" aria-describedby="passwordHelp" minlength="8"
+                                            required>
+                                        <span class="material-symbols-sharp ms-2 d-block"
+                                            id="registerVisibilityOn">visibility</span>
+                                        <span class="material-symbols-sharp ms-2 d-none"
+                                            id="registerVisibilityOff">visibility_off</span>
+                                    </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="inputRegisterConfirmPassword" class="form-label">Confirmar Contraseña</label>
-                                    <input type="password" name="registerConfirmPassword" class="form-control" id="inputRegisterConfirmPassword" aria-describedby="confirmPasswordHelp" minlength="8" required>
+                                    <label for="inputRegisterConfirmPassword" class="form-label">Confirmar
+                                        Contraseña</label>
+                                    <input type="password" name="registerConfirmPassword" class="form-control"
+                                        id="inputRegisterConfirmPassword" aria-describedby="confirmPasswordHelp"
+                                        minlength="8" required>
                                 </div>
-
-                                <button type="submit" class="btn btn-primary" id="registerBtn">Registrarse</button>
-                                <div id="successMessage" style="display: none;" class="alert alert-success mt-3">
-                                    Usuario registrado con éxito.
-                                </div>
+                                <div id="passwordHelp" class="form-text">Tu contraseña debe tener al menos 8 caracteres
+                                    y debe incluir números, letras mayúsculas/minúsculas y símbolos.</div>
+                                <input type="submit" style="display: none;" id="submitRegisterBtn">
                             </form>
                         </div>
                         <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-targer="#loginModal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary" id="registerBtn">Registrarse</button>
+                            <input type="submit" style="display: none;" id="submitRegisterBtn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal to logout -->
+        <section>
+            <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="logoutModalLabel">Cerrar sesión</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ¿Estás seguro/a que querés finalizar tu sesión?
+                        </div>
+                        <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-danger" id="endClientSession">Cerrar sesión</button>
                         </div>
                     </div>
                 </div>
