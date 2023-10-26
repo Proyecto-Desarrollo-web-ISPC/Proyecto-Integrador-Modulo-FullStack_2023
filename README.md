@@ -3,10 +3,18 @@
 ## Nombre del equipo: DevTeamCba
 
 Integrantes:
-*MA.Victoria Urcola
-*Cristian Emanuel Recabarren
-*Lautaro Pena
-*Pablo Scarponi
-*Denisse Araceli Sabeff
-*Gustavo Ariel Toscano
-*Gastón Rosales
+
+* Pena, Lautaro
+
+* Recabarren, Cristian Emanuel
+  
+* Sabeff, Denisse Araceli
+
+* Scarponi, Pablo 
+
+* Toscano, Gustavo Ariel 
+
+* Urcola, Ma. Victoria
+
+
+*ex. integrante: Gastón Rosales
