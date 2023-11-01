@@ -1,4 +1,5 @@
 import { buildUser } from "./buildUserIntances.js";
+import { isUserLoggedIn } from "./getUserInfo.js";
 import { getUsersLocalStoraged } from "./handleUsersLs.js";
 
 function generateUniqueUserId(users) {
@@ -57,7 +58,7 @@ export function getUserDataLogin(formStructure, isUserLoggedIn) {
     formStructure.loginButton.addEventListener('click', (e) => {
         e.preventDefault();
         const formData = {
-            email: formStructure.loginForm.querySelector('#inputLoginEmail').value,
+            email: formStructure.loginForm.querySelector('#inputEmail').value,
             password: formStructure.loginForm.querySelector('#inputPassword').value
         };
 
@@ -78,3 +79,13 @@ export function getUserDataLogin(formStructure, isUserLoggedIn) {
         };
     });
 };
+
+export function disableAddButtons(){
+    const addProductsBtns = document.querySelectorAll('.addProductBtn')
+
+    if(Boolean(isUserLoggedIn.connectSession) === false){
+        for(let i = 0; i < addProductsBtns.length; i++){
+            addProductsBtns[i].classList.add('disabled');
+        };
+    }; 
+}
